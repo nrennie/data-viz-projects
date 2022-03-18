@@ -9,9 +9,9 @@ library(gridExtra)
 
 
 #### read data ####
-dat <- read_excel("Western States Analysis/data/ws_data.xlsx") 
-r <- st_read("Western States Analysis/data/ws_route.gpx", layer="tracks")
-r_wp <- st_read("Western States Analysis/data/ws.gpx", layer="waypoints")
+dat <- read_excel("Western States 100/data/ws_data.xlsx") 
+r <- st_read("Western States 100/data/ws_route.gpx", layer="tracks")
+r_wp <- st_read("Western States 100/data/ws.gpx", layer="waypoints")
 
 
 #### prep data ####
@@ -262,6 +262,6 @@ q
 
 
 #save viz  
-ggsave(q, filename="Western States Analysis/viz.jpg", width=16.5, height=11.7, units="in")
-ggsave(q, filename="Western States Analysis/viz.pdf", width=16.5, height=11.7, units="in", device=cairo_pdf)
+ggsave(q, filename="Western States 100/viz.jpg", width=16.5, height=11.7, units="in")
+ggsave(q, filename="Western States 100/viz.pdf", width=16.5, height=11.7, units="in", device=cairo_pdf)
 

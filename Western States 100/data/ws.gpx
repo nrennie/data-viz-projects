@@ -1,0 +1,123 @@
+<gpx xmlns="http://www.topografix.com/GPX/1/0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0" creator="TOPO! 4.x http://maps.nationalgeographic.com/topo" xsi:schemaLocation="http://www.topografix.com/GPX/1/0 http://www.topografix.com/GPX/1/0/gpx.xsd">
+<bounds minlat="38.8930664062500" minlon="-121.0674972534180" maxlat="39.2236175537109" maxlon="-120.8601150512695"/>
+<wpt lat="39.1955680847168" lon="-120.2384490966797">
+<ele>1904</ele>
+<time>2012-11-20T17:02:11Z</time>
+<name>SQUAW</name>
+</wpt>
+<wpt lat="39.2236175537109" lon="-120.3534164428711">
+<ele>2130</ele>
+<time>2012-11-20T17:03:54Z</time>
+<name>LY0N</name>
+</wpt>
+<wpt lat="39.1859664916992" lon="-120.4343032836914">
+<ele>2140</ele>
+<time>2012-11-20T17:04:36Z</time>
+<name>REDSTAR</name>
+</wpt>
+<wpt lat="39.1194648742676" lon="-120.4802017211914">
+<ele>1761</ele>
+<time>2012-11-20T17:05:40Z</time>
+<name>DUNCAN</name>
+</wpt>
+<wpt lat="39.1562652587891" lon="-120.5028991699219">
+<ele>2046</ele>
+<time>2012-11-20T17:06:05Z</time>
+<name>ROBINSON</name>
+</wpt>
+<wpt lat="39.1171684265137" lon="-120.5252838134766">
+<ele>1852</ele>
+<time>2012-11-20T17:06:49Z</time>
+<name>MILLERS</name>
+</wpt>
+<wpt lat="39.0977668762207" lon="-120.5799026489258">
+<ele>1562</ele>
+<time>2012-11-20T17:07:40Z</time>
+<name>DUSTY</name>
+</wpt>
+<wpt lat="39.1109161376953" lon="-120.6254196166992">
+<ele>1383</ele>
+<time>2012-11-20T17:08:17Z</time>
+<name>LASTCHANCE</name>
+</wpt>
+<wpt lat="39.0961494445801" lon="-120.6645507812500">
+<ele>1327</ele>
+<time>2012-11-20T17:08:38Z</time>
+<name>DEVILSTHUMB</name>
+</wpt>
+<wpt lat="39.0502014160156" lon="-120.7085647583008">
+<ele>544</ele>
+<time>2012-11-20T17:09:16Z</time>
+<name>EL DORADO</name>
+</wpt>
+<wpt lat="39.0409660339355" lon="-120.7350311279297">
+<ele>1054</ele>
+<time>2012-11-20T17:10:24Z</time>
+<name>MICHIGAN</name>
+</wpt>
+<wpt lat="39.0209350585938" lon="-120.8129653930664">
+<ele>998</ele>
+<time>2012-11-20T17:11:39Z</time>
+<name>FORESTHILL</name>
+</wpt>
+<wpt lat="38.9954147338867" lon="-120.8279495239258">
+<ele>484</ele>
+<time>2012-11-20T17:12:21Z</time>
+<name>CAL 1</name>
+</wpt>
+<wpt lat="38.9747505187988" lon="-120.8625030517578">
+<ele>580</ele>
+<time>2012-11-20T17:14:00Z</time>
+<name>CAL2</name>
+</wpt>
+<wpt lat="38.9594497680664" lon="-120.8601150512695">
+<ele>473</ele>
+<time>2012-11-20T17:15:15Z</time>
+<name>CAL3</name>
+</wpt>
+<wpt lat="38.9589004516602" lon="-120.8838806152344">
+<ele>250</ele>
+<time>2012-11-20T17:15:39Z</time>
+<name>CAL4</name>
+</wpt>
+<wpt lat="38.9624328613281" lon="-120.9292526245117">
+<ele>213</ele>
+<time>2012-11-20T17:16:03Z</time>
+<name>RIVER</name>
+</wpt>
+<wpt lat="38.9432678222656" lon="-120.9269332885742">
+<ele>566</ele>
+<time>2012-11-20T17:16:58Z</time>
+<name>GREENGATE</name>
+</wpt>
+<wpt lat="38.9254341125488" lon="-120.9478988647461">
+<ele>491</ele>
+<time>2012-11-20T17:17:57Z</time>
+<name>ALT</name>
+</wpt>
+<wpt lat="38.926164" lon="-120.988021">
+<ele>348</ele>
+<time>2012-11-20T17:18:40Z</time>
+<name>QUARRYRD</name>
+</wpt>
+<wpt lat="38.895301" lon="-121.024296">
+<ele>393</ele>
+<time>2012-11-20T17:19:13Z</time>
+<name>POINTEDROCKS</name>
+</wpt>
+<wpt lat="38.9129676818848" lon="-121.0409698486328">
+<ele>186</ele>
+<time>2012-11-20T17:19:31Z</time>
+<name>NOHANDS</name>
+</wpt>
+<wpt lat="38.8930664062500" lon="-121.0517349243164">
+<ele>329</ele>
+<time>2012-11-20T17:20:07Z</time>
+<name>ROBIEPOINT</name>
+</wpt>
+<wpt lat="38.8947830200195" lon="-121.0674972534180">
+<ele>395</ele>
+<time>2012-11-20T17:20:30Z</time>
+<name>PLACER</name>
+</wpt>
+</gpx>
