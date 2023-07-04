@@ -7,3 +7,5 @@ Data_Viz_Projects.Rproj
 Western States Analysis/data
 Western States Analysis/images
 Western States Analysis/viz.pdf
+*.csv
+*.png
