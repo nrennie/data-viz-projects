@@ -1,13 +1,19 @@
 # Data Viz Projects
 
+## Nobel Prize Laureates
+
+<p align="center">
+  <img src="Nobel Prize Laureates/images/nobel_Peace.png" width="90%">
+</p>
+
 ## Western States 100
 
 <p align="center">
-  <img src="https://github.com/nrennie/Data_Viz_Projects/blob/main/Western States 100/viz.jpg?raw=true" width="90%">
+  <img src="Western States 100/viz.jpg" width="90%">
 </p>
 
 ## London Marathon
 
 <p align="center">
-  <img src="https://github.com/nrennie/Data_Viz_Projects/blob/main/London Marathon/viz.jpg?raw=true" width="90%">
+  <img src="London Marathon/viz.jpg" width="90%">
 </p>
