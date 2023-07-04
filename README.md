@@ -3,7 +3,7 @@
 ## Nobel Prize Laureates
 
 <p align="center">
-  <img src="Nobel Prize Laureates/images/nobel_Peace.png" width="90%">
+  <img src="Nobel Prize Laureates/images/nobel_light_mode.png" width="90%">
 </p>
 
 ## Western States 100
