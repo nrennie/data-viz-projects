@@ -22,16 +22,6 @@ nobel_data <- nobel |>
   arrange(Year) |> 
   select(label, Gender)
 
-# start recording
-gg_record(
-  dir = file.path("Nobel Prize Laureates", "recording"), # where to save the recording
-  device = "png", # device to use to save images
-  width = 5, # width of saved image
-  height = 4, # height of saved image
-  units = "in", # units for width and height
-  dpi = 300 # dpi to use when saving image
-)
-
 # colours 
 bg_col <- "grey20"
 primary_col <- "white"
@@ -93,11 +83,6 @@ ggplot() +
           size = 13,
           margin = margin(l = 10)
         ))
-
-# text running off the top
-# text illegible / too small
-
-
 
 # Turn into function ------------------------------------------------------
 
@@ -177,7 +162,7 @@ nobel_plot <- function(plot_category,
 # save different versions
 for (i in unique(nobel$Category)) {
   p <- nobel_plot(i)
-  fname <- paste0("Nobel Prize Laureates/Images/nobel_", i, ".png")
+  fname <- paste0("Nobel Prize Laureates/images/nobel_", i, ".png")
   ggsave(filename = fname,
          plot = p,
          width = 5,
