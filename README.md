@@ -12,14 +12,20 @@
   <img src="Lemur Family Tree/images/lemur-family-tree.png" width="90%">
 </p>
 
-## Western States 100
+## Heatmap Blanket Knitting Pattern
 
 <p align="center">
-  <img src="Western States 100/viz.jpg" width="90%">
+  <img src="Heatmap Blanket Pattern/images/heatmap-blanket-pattern.png" width="90%">
 </p>
 
 ## London Marathon
 
 <p align="center">
-  <img src="London Marathon/viz.jpg" width="90%">
+  <img src="London Marathon/london-marathon.jpg" width="90%">
+</p>
+
+## Western States 100
+
+<p align="center">
+  <img src="Western States 100/western-states-100.jpg" width="90%">
 </p>
