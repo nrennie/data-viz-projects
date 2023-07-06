@@ -14,6 +14,13 @@
 </p>
 
 
+## Poetry
+
+<p align="center">
+  <img src="Poetry/images/poetry.png" width="80%">
+</p>
+
+
 ## Heatmap Blanket Knitting Pattern
 
 <p align="center">
