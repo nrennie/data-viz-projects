@@ -18,7 +18,7 @@ poetry_plot <- function(fname,
   poem <- tibble::as_tibble(poem)
   
   # set colours
-  set.seed(1234)
+  set.seed(s)
   unique_chars <- unique(unlist(poem))
   unique_chars <- unique_chars[unique_chars %in% letters]
   plot_cols <- tibble::tibble(value = unique_chars,
