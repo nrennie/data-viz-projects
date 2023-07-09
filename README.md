@@ -21,6 +21,13 @@
 </p>
 
 
+## Forest of Bowland
+
+<p align="center">
+  <img src="Forest of Bowland/images/forest-of-bowland.png" width="80%">
+</p>
+
+
 ## Heatmap Blanket Knitting Pattern
 
 <p align="center">
