@@ -75,7 +75,7 @@ rise_plot <- poetry_plot(
   fname = "Poetry/data/still-i-rise.txt",
   text_family = "Commissioner"
 )
-ggsave("Poetry/images/poetry.png",
+ggsave("Poetry/images/still-i-rise.png",
   plot = rise_plot,
   height = 11.7,
   width = 8.3,
