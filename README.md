@@ -17,7 +17,7 @@
 ## Poetry
 
 <p align="center">
-  <img src="Poetry/images/poetry.png" width="80%">
+  <img src="Poetry/images/still-i-rise.png" width="80%">
 </p>
 
 
