@@ -15,18 +15,6 @@ font_add_google("Special Elite", "elite")
 showtext_auto()
 
 
-
-camcorder::gg_record(
-  dir = file.path("recording2"),
-  device = "png",
-  width = 4,
-  height = 6,
-  units = "in",
-  dpi = 300
-)
-
-
-
 # Set parameters ----------------------------------------------------------
 
 bg_col = "#fafafa"
