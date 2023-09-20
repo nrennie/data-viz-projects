@@ -100,7 +100,7 @@ ggsave("Typography Cartography/images/typography-cartography.png",
        bg = "#FAFAFA",
        unit = "in")
 
-# create A3 version
+# create larger version
 make_map(elev_data, title = "  SCOTLAND",
          size = 18, text_size = 90,
          bg_col = "white", text_col = "black",
