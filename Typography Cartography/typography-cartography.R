@@ -19,6 +19,7 @@ showtext_auto()
 
 make_map <- function(elev_data,
                      title,
+                     chars = c("l", "I", "H", "M"),
                      size = 4,
                      text_size = 22,
                      bg_col = "#fafafa",
@@ -32,15 +33,13 @@ make_map <- function(elev_data,
     mutate(y = row_number()) |> 
     pivot_longer(-y, names_to = "x") |> 
     mutate(x = as.numeric(x))
+  # characters to use
+  chars_map <- data.frame(value = seq_len(length(chars)),
+                          value_letter = chars)
   elev_plot <- elev_df |> 
-    mutate(value = ntile(value, n = 4)) |> 
-    mutate(value_letter = case_when(
-      is.na(value) ~ "",
-      value == 1 ~ "l",
-      value == 2 ~ "I",
-      value == 3 ~ "H",
-      value == 4 ~ "M"
-    ))
+    mutate(value = ntile(value, n = length(chars))) |> 
+    left_join(chars_map, by = "value") |> 
+    mutate(value_letter = replace_na(value_letter, " "))
   # plot
   g <- ggplot() +
     geom_text(data = elev_plot, 
