@@ -20,16 +20,6 @@ font_add_google("Rye", "rye")
 font_add_google("Quattrocento", "quattrocento")
 showtext_auto()
 
-# Start recording ---------------------------------------------------------
-
-camcorder::gg_record(
-  dir = file.path("recording"),
-  device = "png",
-  width = 6,
-  height = 8.5,
-  units = "in",
-  dpi = 300
-)
 
 # Load data ---------------------------------------------------------------
 
@@ -48,7 +38,7 @@ text_col <- "grey10"
 highlight_col <- "#ec7014"
 
 # text
-title <- "<br><br><span style='font-size: 54px; font-weight: bold; font-family:\"rye\";'>1854 Broad Street Cholera Outbreak</span><br><br>"
+title <- "<span style='font-size: 54px; font-weight: bold; font-family:\"rye\";'>1854 Broad Street Cholera Outbreak</span><br><br>"
 st <- "<span style='font-family:\"quattrocento\";'>John Snow’s iconic 1854 map of the clustering of cholera deaths in 
 Soho, London is one of the best and earliest uses of epidemiology and 
 geospatial analysis to investigate an outbreak. It led to the identification 
@@ -61,7 +51,7 @@ social <- nrBrand::social_caption(
   font_family = "quattrocento"
 )
 cap <- paste0(title, st, 
-              "**Data**: On the Mode of Communication of Cholera. John Snow. 1855. <br>**Graphic**: ", social
+              "**Data**: On the Mode of Communication of Cholera. John Snow. 1855. | SnowGIS Dataset. Robin Wilson. <br>**Graphic**: ", social
 )
 
 
@@ -69,9 +59,8 @@ cap <- paste0(title, st,
 
 deaths <- cbind(deaths, st_coordinates(deaths))
 pumps <- cbind(pumps, st_coordinates(pumps))
-# compare with HistData::Snow.pumps
-pumps$label <- c("Broad Street", "Great Marlborough", "Oxford Market", "Dean Street",
-                 "So Soho", "Bridle Street", "Coventry Street", "Warwick Street")  
+pumps$label <- c("Broad Street", "", "", "", "", "", "", "")
+
 
 # Create a smooth raster file ---------------------------------------------
 
@@ -178,7 +167,7 @@ pumps_map <- smooth_map +
     mapping = aes(
       x = X, y = Y, label = str_wrap(label, 8)
     ),
-    size = 11,
+    size = 13,
     hjust = 0,
     nudge_x = 25,
     colour = text_col,
@@ -201,7 +190,7 @@ pumps_map +
           lineheight = 0.5,
           size = 28,
           family = "quattrocento",
-          margin = margin(l = 8, r = 5, t = 15),
+          margin = margin(l = 8, r = 5, t = 15, b = 5),
         ),
         plot.margin = margin(t = -26))
 
@@ -212,7 +201,3 @@ ggsave("John Snow Cholera Maps/images/john-snow-cholera-map-nrennie.png",
        height = 8,
        width = 6,
        unit = "in")
-
-
-
-# check name of two pumps
