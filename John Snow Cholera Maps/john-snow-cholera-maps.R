@@ -77,7 +77,7 @@ ppp_deaths <- ppp(deaths$X,
                   marks = deaths$Count,
                   window = obs_window
 )
-idw_deaths <- idw(ppp_deaths, power = 0.05, at = "pixels")
+idw_deaths <- idw(ppp_deaths, power = 0.05, dimyx = 200, at = "pixels")
 sp_idw_deaths <- as.data.frame.im(idw_deaths) |> as_tibble()
 obj_raster <- rast(sp_idw_deaths)
 plot(obj_raster)
