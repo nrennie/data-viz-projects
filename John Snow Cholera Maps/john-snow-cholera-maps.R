@@ -60,9 +60,13 @@ cap <- paste0(title, st,
 deaths <- cbind(deaths, st_coordinates(deaths))
 pumps <- cbind(pumps, st_coordinates(pumps))
 pumps$label <- c("Broad Street", "", "", "", "", "", "", "")
+pumps$number <- as.character(1:nrow(pumps))
 
 
 # Create a smooth raster file ---------------------------------------------
+
+# set resolution
+resol <- 150
 
 # raster cropping
 bb_vec <- c(xmin = 529100, ymin = 180600, xmax = 529850, ymax = 181310)
@@ -77,7 +81,7 @@ ppp_deaths <- ppp(deaths$X,
                   marks = deaths$Count,
                   window = obs_window
 )
-idw_deaths <- idw(ppp_deaths, power = 0.05, dimyx = 200, at = "pixels")
+idw_deaths <- idw(ppp_deaths, power = 0.05, dimyx = resol, at = "pixels")
 sp_idw_deaths <- as.data.frame.im(idw_deaths) |> as_tibble()
 obj_raster <- rast(sp_idw_deaths)
 plot(obj_raster)
@@ -90,8 +94,8 @@ data_grid <- as.data.frame(obj_raster, xy = TRUE) |>
 pumps_wide <- pumps |> 
   st_drop_geometry() |> 
   as_tibble() |> 
-  select(-Id) |> 
-  pivot_wider(names_from = label, values_from = c(X, Y))
+  select(-c(Id, label)) |> 
+  pivot_wider(names_from = number, values_from = c(X, Y))
 
 # dist to each point
 p <- 0.5
@@ -115,9 +119,11 @@ rescale_raster <- function(r){
 }
 
 # weight value by average distance from data
-plot_rast <- log10(rescale_raster(dist_rast[["value"]]) / rescale_raster(dist_rast[["min_dist"]]))
+plot_rast <- log10(rescale_raster(dist_rast[["value"]]) / 
+                     rescale_raster(dist_rast[["min_dist"]]))
 minmax_rast <- range(as.vector(plot_rast$value), finite = TRUE)
-plot_rast <- clamp(plot_rast, lower = minmax_rast[1], upper = minmax_rast[2], values = TRUE)
+plot_rast <- clamp(plot_rast, lower = minmax_rast[1],
+                   upper = minmax_rast[2], values = TRUE)
 plot(plot_rast)
 
 
@@ -135,10 +141,14 @@ bg_map <- ggplot() +
 # plot smoothed raster file
 smooth_map <- bg_map +
   new_scale_fill() +
-  geom_spatraster(data = plot_rast, mapping = aes(alpha = after_stat(value))) +
-  scale_alpha_continuous(guide = "none", range = c(0.5, 1)) +
+  geom_spatraster(data = plot_rast,
+                  mapping = aes(alpha = after_stat(value)),
+                  interpolate = TRUE,
+                  ) +
+  scale_alpha(guide = "none", range = c(0.5, 1), na.value = 0.5) +
   scale_fill_distiller(palette = "YlOrBr",
                        direction = 1,
+                       na.value = "transparent",
                        name = "",
                        limits = c(lower, upper),
                        breaks = c(lower + 0.35, upper - 0.35),
@@ -201,3 +211,4 @@ ggsave("John Snow Cholera Maps/images/john-snow-cholera-map-nrennie.png",
        height = 8,
        width = 6,
        unit = "in")
+
