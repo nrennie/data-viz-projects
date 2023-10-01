@@ -39,7 +39,7 @@ make_map <- function(elev_data,
   elev_plot <- elev_df |> 
     mutate(value = ntile(value, n = length(chars))) |> 
     left_join(chars_map, by = "value") |> 
-    mutate(value_letter = replace_na(value_letter, " "))
+    drop_na()
   # plot
   g <- ggplot() +
     geom_text(data = elev_plot, 
