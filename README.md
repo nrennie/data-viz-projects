@@ -35,6 +35,13 @@
 </p>
 
 
+## Sea Surface Temperatures
+
+<p align="center">
+  <img src="ESA Little Pictures/esa-little-pictures.png" width="80%">
+</p>
+
+
 ## Heatmap Blanket Knitting Pattern
 
 <p align="center">
