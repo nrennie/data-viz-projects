@@ -22,8 +22,7 @@ plot_data <- sst_data |>
   dplyr::summarise(
     min_sst = min(sst),
     max_sst = max(sst)
-  ) |>
-  dplyr::mutate(mid_sst = 0.5 * (min_sst + max_sst))
+  )
 
 
 # Plot --------------------------------------------------------------------
