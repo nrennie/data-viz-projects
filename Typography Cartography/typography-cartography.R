@@ -101,14 +101,15 @@ ggsave("Typography Cartography/images/typography-cartography.png",
 
 # create larger version
 make_map(elev_data, title = "  SCOTLAND",
-         size = 18, text_size = 90,
-         bg_col = "white", text_col = "black",
+         size = 9.5, text_size = 50,
+         bg_col = "#FAFAFA", text_col = "grey20",
          caption = FALSE) +
-  theme(plot.title = element_text(margin = margin(t = 100, b = -140)))
+  theme(plot.title = element_text(margin = margin(t = 40, b = -100))) +
+  labs(caption = "by Nicola Rennie")
 ggsave("Typography Cartography/images/typography-cartography-scotland-big.png",
-       width = 15.5,
-       height = 23.5,
-       bg = "white",
+       width = 8,
+       height = 12,
+       bg = "#FAFAFA",
        unit = "in")
 
 # Plot England ------------------------------------------------------------
