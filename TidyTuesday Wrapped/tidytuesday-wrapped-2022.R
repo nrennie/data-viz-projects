@@ -128,4 +128,4 @@ p + inset_element(inset1, left = -1, right = 1.2, bottom = 0, top = 2.2, align_t
                                     size = 30))
 
 # save
-ggsave("images/tidytuesday-wrapped.png", width = 2.5, height = 5, units = "in")
+ggsave("TidyTuesday Wrapped/images/tidytuesday-wrapped-2022.png", width = 2.5, height = 5, units = "in")
