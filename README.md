@@ -66,7 +66,11 @@
 ## #TidyTuesday Wrapped
 
 <p align="center">
-  <img src="TidyTuesday Wrapped/images/tidytuesday-wrapped.png" width="80%">
+  <img src="TidyTuesday Wrapped/images/tidytuesday-wrapped-2023.png" width="80%">
+</p>
+
+<p align="center">
+  <img src="TidyTuesday Wrapped/images/tidytuesday-wrapped-2022.png" width="80%">
 </p>
 
 
