@@ -3,7 +3,7 @@ library(ggtext)
 library(showtext)
 
 # load data
-# accessed: 22 Aug 2023
+# accessed: 27 Jan 2024
 books <- readr::read_csv("Reading Shelf/data/goodreads_library_export.csv") |>
   janitor::clean_names()
 
@@ -42,28 +42,6 @@ book_data <- books |>
     days = diff(c(0, days_since))
   )
 
-# tidy text
-plot_data <- book_data |>
-  mutate(tidy_title = gsub(":.*", "", title), .after = title) |>
-  mutate(
-    tidy_title = gsub("\\(.*", "", tidy_title),
-    tidy_title = str_to_title(tidy_title)
-  ) |>
-  mutate(
-    author = trimws(author, which = "right", whitespace = ", "),
-    author = gsub("  ", " ", author)
-  ) |> 
-  mutate(tidy_title = case_when(
-    days < 10 ~ str_wrap(tidy_title, 4),
-    days >= 10 & days < 23 ~ str_wrap(tidy_title, 15),
-    TRUE ~ str_wrap(tidy_title, 25)
-  )) |> 
-  mutate(author = case_when(
-    days < 12 ~ str_wrap(author, 4),
-    days >= 10 & days < 23 ~ str_wrap(author, 18),
-    TRUE ~ str_wrap(author, 25)
-  ))
-
 # text
 social <- nrBrand::social_caption(
   bg_colour = bg_col,
@@ -78,11 +56,64 @@ st <- glue::glue("I read a total of {nrow(plot_data)} books in {yr}, spanning
                  average Goodreads rating, and 
                  {table(plot_data$rating_comp)['below average']} of them 
                  <span style='color:{highlight_col2}'>below</span>. The widths 
-                 each book in this chart represent the number of pages, and the 
-                 heights how long I spent reading it.")
+                 of each book in this chart represent the number of pages, and the 
+                 heights, how long I spent reading it.")
+
+# tidy text
+plot_data <- book_data |>
+  mutate(tidy_title = gsub(":.*", "", title), .after = title) |>
+  mutate(
+    tidy_title = gsub("\\(.*", "", tidy_title),
+    tidy_title = str_to_title(tidy_title)
+  ) |>
+  mutate(
+    author = trimws(author, which = "right", whitespace = ", "),
+    author = gsub("  ", " ", author),
+    author = case_when(
+      str_detect(author, "Arthur Conan Doyle") ~ "Arthur Conan Doyle",
+      TRUE ~ author
+    )
+  ) |> 
+  mutate(
+    label = glue::glue(
+      "<span style='font-family: henny'>{tidy_title}. </span>
+      <span style='font-family: cabin'>{author}. </span>"
+    )
+  ) |> 
+  # wrap based on title length and days
+  mutate(label_len = nchar(tidy_title) + nchar(author)) |> 
+  mutate(id = row_number())
+
+# add label function
+geom_booklabel <- function(row_num) {
+  data <- filter(plot_data, id == row_num)
+  width <- data$days / 80
+  size <- ifelse(data$days > 30, 6, 4)
+  geom_textbox(
+    data = data,
+    mapping = aes(
+      x = mid_pages,
+      y = 0.5,
+      label = label
+    ),
+    hjust = 0,
+    halign = 0,
+    vjust = 0.5,
+    valign = 0.5,
+    lineheight = 0.35,
+    fill = "transparent",
+    box.colour = "transparent",
+    text.colour = "white",
+    orientation = "left-rotated",
+    size = size,
+    maxwidth = width,
+    box.padding = unit(c(0.5, 0.5, 0.5, 0.5), "pt")
+  ) 
+}
+
 
 # plot
-ggplot() +
+base_plot <- ggplot() +
   # books
   geom_rect(
     data = plot_data,
@@ -94,38 +125,6 @@ ggplot() +
       fill = rating_comp
     ),
     colour = bg_col
-  ) +
-  # titles and authors
-  geom_text(
-    data = plot_data,
-    mapping = aes(
-      x = start_pages + 40,
-      y = 0.5,
-      label = tidy_title
-    ),
-    angle = 90,
-    size = 6.5,
-    hjust = 0,
-    vjust = 1,
-    lineheight = 0.35,
-    family = "henny",
-    colour = "white"
-  ) +
-  geom_text(
-    data = plot_data,
-    mapping = aes(
-      x = end_pages - 40,
-      y = 0.5,
-      label = author
-    ),
-    angle = 90,
-    size = 6,
-    hjust = 0,
-    lineheight = 0.3,
-    vjust = 0,
-    fontface = "italic",
-    family = "cabin",
-    colour = "white",
   ) +
   # bookshelf
   geom_rect(
@@ -145,6 +144,7 @@ ggplot() +
       "below average" = highlight_col2
     )
   ) +
+  scale_size_identity() +
   labs(
     title = glue::glue("Nicola's {yr} Bookshelf"),
     caption = social,
@@ -168,7 +168,7 @@ ggplot() +
       hjust = 1,
       halign = 1,
       colour = text_col,
-      maxwidth = 0.7,
+      maxwidth = 0.75,
       size = 24,
       lineheight = 0.5,
       family = "cabin",
@@ -185,6 +185,13 @@ ggplot() +
     ),
     plot.margin = margin(5, 0, 0, 0)
   )
+
+# add labels
+for (i in 1:max(plot_data$id)) {
+  base_plot <- base_plot + 
+  geom_booklabel(row_num = i) 
+}
+base_plot
 
 # save
 ggsave("Reading Shelf/images/reading-shelf.png", width = 6, height = 4, units = "in")
