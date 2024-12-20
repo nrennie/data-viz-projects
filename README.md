@@ -3,15 +3,15 @@
 ## Street Maps
 
 <p align="center">
-  <img src="Street Maps/images/glasgow.png" width="33%">
-  <img src="Street Maps/images/edinburgh.png" width="33%">
-  <img src="Street Maps/images/banbury.png" width="33%">
+  <img src="Street Maps/images/glasgow.png" width="32%">
+  <img src="Street Maps/images/edinburgh.png" width="32%">
+  <img src="Street Maps/images/banbury.png" width="32%">
 </p>
 
 <p align="center">
-  <img src="Street Maps/images/lancaster.png" width="33%">
-  <img src="Street Maps/images/armadale.png" width="33%">
-  <img src="Street Maps/images/st_andrews.png" width="33%">
+  <img src="Street Maps/images/lancaster.png" width="32%">
+  <img src="Street Maps/images/armadale.png" width="32%">
+  <img src="Street Maps/images/st_andrews.png" width="32%">
 </p>
 
 ## Nobel Prize Laureates
