@@ -1,5 +1,12 @@
 # Data Viz Projects
 
+## Bob Ross Paintings
+
+<p align="center">
+  <img src="Bob Ross Paintings/images/bob-ross-paintings.png" width="80%">
+</p>
+
+
 ## Nobel Prize Laureates
 
 <p align="center">
