@@ -30,7 +30,7 @@ title_font <- "ubuntu"
 
 highlight_col <- "#B53737"
 text_col <- "#00344A"
-bg_col <- "white"
+bg_col <- "#F0F5F5"
 ```
 
 ```{r}
@@ -95,13 +95,14 @@ g <- ggplot() +
     alpha = 0.3,
     size = 0.75
   ) +
+  coord_flip() +
   scale_fill_gradient2(
     midpoint = mean(plot_data$Income),
     limits = c(0, 35),
     low = "#00567A", high = highlight_col
   ) +
   scale_colour_manual(values = rep("#00567A", length(unique(plot_data$Country)))) +
-  scale_y_discrete(limits = rev) +
+  scale_y_discrete() +
   scale_x_continuous(limits = c(0, 35), expand = c(0, 0)) +
   labs(
     x = "% of income received by richest 1%", y = "",
@@ -159,8 +160,8 @@ dropdown_html <- tags$div(
 ```
 
 ```{r}
-#| fig-width: 5
-#| fig-height: 10
+#| fig-width: 8
+#| fig-height: 5
 #| message: false
 #| warning: false
 # Render interactive
@@ -169,6 +170,7 @@ g_girafe <- girafe(
   bg = bg_col,
   options = list(
     opts_tooltip(
+      delay_mouseover = 500,
       opacity = 1, use_fill = TRUE,
       css = glue("
         padding: 5pt;
@@ -226,7 +228,7 @@ browsable(
           } else {
             el.setAttribute('stroke', '#00344A');
             el.setAttribute('stroke-opacity', '0.1');
-            el.setAttribute('stroke-width', '1');
+            el.setAttribute('stroke-width', '0');
             el.setAttribute('fill', '#00344A');
             el.setAttribute('fill-opacity', '0.1');
           }
