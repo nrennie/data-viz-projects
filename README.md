@@ -75,7 +75,8 @@
 ## Heatmap Blanket Knitting Pattern
 
 <p align="center">
-  <img src="Heatmap Blanket Pattern/images/heatmap-blanket-pattern.png" width="100%">
+  <img src="Heatmap Blanket Pattern/images/heatmap-blanket-pattern.png" width="48%">
+  <img src="Heatmap Blanket Pattern/images/heatmap-blanket.jpg" width="48%">
 </p>
 
 
