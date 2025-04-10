@@ -126,23 +126,13 @@ g <- ggplot() +
       margin = margin(t = 10)
     ),
     panel.grid = element_blank(),
+    axis.text = element_text(size = rel(0.7), angle = 30),
     text = element_text(colour = text_col)
   )
 ```
 
 ```{r}
 g_int <- suppressMessages(g)
-```
-
-```{r}
-#| eval: false
-# Save
-ggsave(
-  filename = "Income Inequality/images/income_inequality.png",
-  plot = g,
-  width = 5, height = 10,
-  unit = "in", bg = bg_col
-)
 ```
 
 ```{r}
