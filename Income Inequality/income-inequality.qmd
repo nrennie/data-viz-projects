@@ -1,0 +1,195 @@
+
+```{r}
+#| message: false
+#| warning: false
+# Packages
+library(ggplot2)
+library(ggtext)
+library(showtext)
+library(nrBrand)
+library(ggridges)
+library(PrettyCols)
+library(ggiraph)
+library(glue)
+```
+
+```{r}
+#| message: false
+# Data: https://ourworldindata.org/economic-inequality
+income <- readr::read_csv("Income Inequality/data/income-share-of-the-richest-1.csv")
+```
+
+```{r}
+# Fonts
+font_add_google("Ubuntu", "ubuntu")
+showtext_auto()
+showtext_opts(dpi = 300)
+body_font <- "ubuntu"
+title_font <- "ubuntu"
+
+highlight_col <- "#B53737"
+text_col <- "#00344A"
+bg_col <- "#E2EDF4"
+```
+
+```{r}
+plot_data <- income |>
+  dplyr::filter(Year >= 1980) |>
+  dplyr::filter(
+    stringr::str_detect(Country, "(WID)", negate = TRUE),
+    Country != "World"
+  ) |>
+  dplyr::mutate(
+    Country = stringr::str_remove(Country, " \\(country\\)"),
+    Country = dplyr::if_else(
+      Country == "Cote d'Ivoire", "Ivory Coast", Country
+    )
+  ) |>
+  tidyr::drop_na() |>
+  dplyr::rename(
+    Income = `Income share of the richest 1% (before tax) (World Inequality Database)`
+  ) |> 
+  dplyr::mutate(
+    tooltip_label = glue("{Country}\n{round(Income)}% in {Year}")
+  )
+```
+
+```{r}
+# Text
+social <- nrBrand::social_caption(
+  bg_colour = bg_col,
+  icon_colour = highlight_col,
+  font_colour = text_col,
+  font_family = body_font,
+  mastodon = NA,
+  linkedin = NA,
+  bluesky = NA
+)
+title <- "<span style='font-size:20pt;'>**More alike, but more unequal**</span><br><br>"
+st <- paste0(title, "The share of income received by the richest 1% of the population where income is measured before payment of taxes and non-pension benefits but after the payment of public and private pensions. Countries are becoming more similar in their wealth inequality, but more unequal on average.<br>")
+cap <- paste0(
+  "**Data**: World Inequality Database (WID). Processed by Our World in Data<br>**Graphic**: ", social
+)
+```
+
+```{r}
+#| fig-width: 5
+#| fig-height: 10
+#| message: false
+g <- ggplot() +
+  geom_density_ridges_gradient(
+    data = plot_data,
+    mapping = aes(
+      x = Income,
+      y = as.factor(Year),
+      fill = after_stat(x)
+    ),
+    linewidth = 0.2, colour = text_col,
+    scale = 1
+  ) +
+  geom_point_interactive(
+    data = plot_data,
+    mapping = aes(
+      x = Income, y = as.factor(Year), data_id = Country,
+      tooltip = tooltip_label, colour = Country
+    ),
+    alpha = 0.3,
+    size = 0.75
+  ) +
+  scale_fill_gradient2(
+    midpoint = mean(plot_data$Income),
+    limits = c(0, 35),
+    low = "#00567A", high = highlight_col
+  ) +
+  scale_colour_manual(values = rep("#00567A", length(unique(plot_data$Country)))) +
+  scale_y_discrete(limits = rev) +
+  scale_x_continuous(limits = c(0, 35), expand = c(0, 0)) +
+  labs(
+    x = "% of income received by richest 1%", y = "",
+    title = st,
+    caption = cap
+  ) +
+  theme_minimal(base_size = 8.5, base_family = body_font) +
+  theme(
+    plot.margin = margin(5, 10, 5, 5),
+    legend.position = "none",
+    plot.title.position = "plot",
+    plot.caption.position = "plot",
+    plot.background = element_rect(fill = bg_col, colour = bg_col),
+    panel.background = element_rect(fill = bg_col, colour = bg_col),
+    plot.title = element_textbox_simple(
+      colour = text_col,
+      hjust = 0.5,
+      halign = 0.5,
+      lineheight = 1,
+      family = body_font,
+      maxwidth = 0.95,
+      margin = margin(t = 10)
+    ),
+    plot.caption = element_textbox_simple(
+      colour = text_col,
+      hjust = 0.5,
+      halign = 0.5,
+      lineheight = 1,
+      family = body_font,
+      maxwidth = 0.8,
+      margin = margin(t = 10)
+    ),
+    panel.grid = element_blank(),
+    text = element_text(colour = text_col)
+  )
+```
+
+```{r}
+g_int <- suppressMessages(g)
+```
+
+```{r}
+#| eval: false
+# Save
+ggsave(
+  filename = "Income Inequality/images/income_inequality.png",
+  plot = g,
+  width = 5, height = 10,
+  unit = "in", bg = bg_col
+)
+```
+
+```{r}
+#| fig-width: 5
+#| fig-height: 10
+#| message: false
+#| warning: false
+# Render interactive
+girafe(
+  ggobj = g_int,
+  bg = bg_col,
+  options = list(
+    opts_tooltip(
+      opacity = 1, use_fill = TRUE,
+      css = glue("
+        padding: 5pt;
+        font-family: {body_font};
+        font-size: 1rem;
+        color: {bg_col};
+        border: solid;
+        border-color: {text_col};
+        border-width: 2px")
+    ),
+    opts_hover_inv(css = "opacity: 0.1"),
+    opts_toolbar(saveaspng = FALSE),
+    opts_zoom(max = 1),
+    opts_hover(
+      css = girafe_css(
+        css = glue("stroke:{text_col};fill:{text_col};fill-opacity: 1"),
+        point = glue("
+          stroke: {text_col};
+          stroke-opacity: 1;
+          stroke-width: 3px;
+          fill: {text_col};
+          fill-opacity: 1")
+      )
+    )
+  )
+)
+```

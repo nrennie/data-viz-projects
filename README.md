@@ -7,6 +7,13 @@
   <img src="Periodic Table/images/periodic_table_interactive.png" width="48%">
 </p>
 
+## Income Inequality
+
+<p align="center">
+  <img src="Income Inequality/images/income_inequality.png" width="48%">
+  <img src="Income Inequality/images/income_inequality_interactive.png" width="48%">
+</p>
+
 ## Shakespeare's Sonnets
 
 <p align="center">

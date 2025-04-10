@@ -20,6 +20,10 @@ execute:
 
 {{< include "Periodic Table/periodic-table.qmd" >}}
 
+## Income Inequality
+
+{{< include "Income Inequality/income-inequality.qmd" >}}
+
 ## Shakespeare's Sonnets
 
 ::: {.grid}
