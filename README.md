@@ -30,7 +30,7 @@
 </p>
 
 
-## Typography Cartography (Map of Scotland)
+## Typography Cartography
 
 <p align="center">
   <img src="Typography Cartography/images/typography-cartography.png" width="100%">
