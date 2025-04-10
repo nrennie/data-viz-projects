@@ -1,9 +1,16 @@
 ---
 title: "Data Visualisation Projects"
+subtitle: "This site hosts a collection of my ([Nicola Rennie](https://nrennie.rbind.io/)) miscellaneous data visualisation projects. The source code for all charts can be found on [GitHub](https://github.com/nrennie/data-viz-projects)."
+include-after-body: 
+  text: |
+    <footer class="footer">© Nicola Rennie. 2025. All rights reserved.</footer>
 format:
   html:
     embed-resources: true
     toc: true
+    page-layout: full
+    theme: [pulse, custom.scss]
+lightbox: true
 execute:
   freeze: auto
   echo: false
