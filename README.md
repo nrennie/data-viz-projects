@@ -1,5 +1,12 @@
 # Data Viz Projects
 
+## Periodic Table
+
+<p align="center">
+  <img src="Periodic Table/images/periodic_table.png" width="48%">
+  <img src="Periodic Table/images/periodic_table_interactive.png" width="48%">
+</p>
+
 ## Shakespeare's Sonnets
 
 <p align="center">

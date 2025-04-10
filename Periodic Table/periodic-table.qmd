@@ -1,0 +1,185 @@
+---
+title: "Periodic Table of Elements"
+execute:
+  echo: false
+fig-height: 6
+fig-width: 7
+fig-dpi: 300
+format:
+  html:
+    embed-resources: true
+---
+
+```{r}
+#| message: false
+#| warning: false
+# Packages
+library(tidyverse)
+library(paletteer)
+library(nrBrand)
+library(ggiraph)
+library(ggtext)
+library(showtext)
+library(glue)
+library(geofacet)
+```
+
+```{r}
+#| message: false
+#| warning: false
+# Data
+elements <- readr::read_csv("https://raw.githubusercontent.com/andrejewski/periodic-table/refs/heads/master/data.csv")
+elements_grid <- readr::read_csv("data/periodic-table-grid.csv")
+```
+
+```{r}
+# Fonts
+font_add_google("Ubuntu")
+font_add_google("Bangers")
+showtext_auto()
+showtext_opts(dpi = 300)
+```
+
+```{r}
+# Parameters
+bg_col <- "grey97"
+text_col <- "grey10"
+highlight_col <- "grey80"
+body_font <- "Ubuntu"
+title_font <- "Bangers"
+```
+
+```{r}
+# Text
+social <- nrBrand::social_caption(
+  bg_colour = bg_col,
+  icon_colour = text_col,
+  font_colour = text_col,
+  font_family = body_font
+)
+title <- "The Periodic  Table of the Elements"
+st <- "The periodic table, also known as the periodic table of the elements, is an ordered arrangement of the chemical elements into rows and columns. This chart shows when elements were discovered, with *Ancient* elements represented by the year 1500."
+cap <- paste0(
+  "**Data**: Chris Andrejewski (github.com/andrejewski/periodic-table)<br>**Graphic**:", social
+)
+```
+
+
+```{r}
+#| warning: false
+# Wrangling
+plot_data <- elements |>
+  mutate(
+    year = if_else(
+      yearDiscovered == "Ancient", 1500, as.numeric(yearDiscovered)
+    ),
+    xmax = 2025,
+    tooltip_label = glue("{name} ({symbol})\nAtomic Number: {atomicNumber}\nDiscovered: {yearDiscovered}\nGroup: {stringr::str_to_sentence(groupBlock)}")
+  )
+```
+
+```{r}
+#| message: false
+# Static plot
+g <- ggplot(
+  data = plot_data
+) +
+  geom_rect(
+    mapping = aes(
+      xmin = year, xmax = 2025, ymin = 0, ymax = 1,
+      fill = groupBlock
+    )
+  ) +
+  facet_geo(~symbol, grid = elements_grid) +
+  scale_x_continuous(limits = c(1500, 2025)) +
+  scale_fill_paletteer_d("MoMAColors::Klein") +
+  labs(title = title, subtitle = st, caption = cap) +
+  coord_cartesian(expand = FALSE) +
+  theme_void(base_family = body_font, base_size = 9) +
+  theme(
+    plot.margin = margin(5, 10, 5, 10),
+    legend.position = "none",
+    plot.title.position = "plot",
+    plot.caption.position = "plot",
+    plot.background = element_rect(fill = bg_col, colour = bg_col),
+    panel.background = element_rect(fill = highlight_col, colour = highlight_col),
+    plot.title = element_textbox_simple(
+      colour = text_col,
+      hjust = 0.5,
+      halign = 0.5,
+      margin = margin(b = 5, t = 5),
+      lineheight = 0.5,
+      family = title_font,
+      face = "bold",
+      size = rel(1.8)
+    ),
+    plot.subtitle = element_textbox_simple(
+      colour = text_col,
+      hjust = 0.5,
+      halign = 0.5,
+      margin = margin(b = 20, t = 5),
+      family = body_font,
+      maxwidth = 0.8
+    ),
+    plot.caption = element_textbox_simple(
+      colour = text_col,
+      hjust = 0.5,
+      halign = 0.5,
+      margin = margin(b = 0, t = 20),
+      family = body_font
+    ),
+    aspect.ratio = 1,
+    strip.text = element_blank(),
+    strip.background = element_blank()
+  )
+```
+
+```{r}
+#| eval: false
+# Save
+ggsave(
+  filename = "Periodic Table/images/periodic_table.png",
+  plot = g,
+  width = 7, height = 5,
+  unit = "in", bg = bg_col
+)
+```
+
+```{r}
+# Interactive plot
+g_int <- g + geom_rect_interactive(
+  mapping = aes(
+    xmin = 1500, xmax = xmax, ymin = 0, ymax = 1,
+    tooltip = tooltip_label, data_id = symbol
+  ),
+  fill = highlight_col,
+  alpha = 0
+)
+```
+
+```{r}
+#| fig-width: 7
+#| fig-height: 5
+# Render interactive
+girafe(
+  ggobj = g_int,
+  bg = bg_col,
+  options = list(
+    opts_tooltip(
+      opacity = 0.95, use_fill = TRUE,
+      use_stroke = FALSE,
+      css = "
+        padding: 5pt;
+        font-family: {body_font};
+        font-size: 1rem;
+        color: {text_col};
+        border: solid;
+        border-color: {highlight_col};
+        border-width: 2px"
+    ),
+    opts_hover_inv(css = "fill:{bg_col};fill-opacity:0.5"),
+    opts_toolbar(saveaspng = FALSE),
+    opts_zoom(max = 1)
+  )
+)
+```

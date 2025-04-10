@@ -9,4 +9,7 @@
 *.pdf
 *.csv
 *.txt
+*.html
 John Snow Cholera Maps/data/
+!Periodic Table/data/elements_grid.csv
+
