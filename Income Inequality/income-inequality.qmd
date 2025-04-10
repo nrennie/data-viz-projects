@@ -11,6 +11,7 @@ library(ggridges)
 library(PrettyCols)
 library(ggiraph)
 library(glue)
+library(htmltools)
 ```
 
 ```{r}
@@ -29,7 +30,7 @@ title_font <- "ubuntu"
 
 highlight_col <- "#B53737"
 text_col <- "#00344A"
-bg_col <- "#E2EDF4"
+bg_col <- "#F0F5F5"
 ```
 
 ```{r}
@@ -48,7 +49,7 @@ plot_data <- income |>
   tidyr::drop_na() |>
   dplyr::rename(
     Income = `Income share of the richest 1% (before tax) (World Inequality Database)`
-  ) |> 
+  ) |>
   dplyr::mutate(
     tooltip_label = glue("{Country}\n{round(Income)}% in {Year}")
   )
@@ -65,8 +66,6 @@ social <- nrBrand::social_caption(
   linkedin = NA,
   bluesky = NA
 )
-title <- "<span style='font-size:20pt;'>**More alike, but more unequal**</span><br><br>"
-st <- paste0(title, "The share of income received by the richest 1% of the population where income is measured before payment of taxes and non-pension benefits but after the payment of public and private pensions. Countries are becoming more similar in their wealth inequality, but more unequal on average.<br>")
 cap <- paste0(
   "**Data**: World Inequality Database (WID). Processed by Our World in Data<br>**Graphic**: ", social
 )
@@ -96,17 +95,17 @@ g <- ggplot() +
     alpha = 0.3,
     size = 0.75
   ) +
+  coord_flip() +
   scale_fill_gradient2(
     midpoint = mean(plot_data$Income),
     limits = c(0, 35),
     low = "#00567A", high = highlight_col
   ) +
   scale_colour_manual(values = rep("#00567A", length(unique(plot_data$Country)))) +
-  scale_y_discrete(limits = rev) +
+  scale_y_discrete() +
   scale_x_continuous(limits = c(0, 35), expand = c(0, 0)) +
   labs(
     x = "% of income received by richest 1%", y = "",
-    title = st,
     caption = cap
   ) +
   theme_minimal(base_size = 8.5, base_family = body_font) +
@@ -117,15 +116,6 @@ g <- ggplot() +
     plot.caption.position = "plot",
     plot.background = element_rect(fill = bg_col, colour = bg_col),
     panel.background = element_rect(fill = bg_col, colour = bg_col),
-    plot.title = element_textbox_simple(
-      colour = text_col,
-      hjust = 0.5,
-      halign = 0.5,
-      lineheight = 1,
-      family = body_font,
-      maxwidth = 0.95,
-      margin = margin(t = 10)
-    ),
     plot.caption = element_textbox_simple(
       colour = text_col,
       hjust = 0.5,
@@ -156,16 +146,31 @@ ggsave(
 ```
 
 ```{r}
-#| fig-width: 5
-#| fig-height: 10
+options_vec <- sort(unique(plot_data$Country))
+names(options_vec) <- options_vec
+dropdown_html <- tags$div(
+  style = 'text-align: center; margin-bottom: 10px;',
+  tags$select(
+    id = "dropdown",
+    lapply(names(options_vec), function(name) {
+      tags$option(value = options_vec[[name]], name)
+    })
+  )
+)
+```
+
+```{r}
+#| fig-width: 8
+#| fig-height: 5
 #| message: false
 #| warning: false
 # Render interactive
-girafe(
+g_girafe <- girafe(
   ggobj = g_int,
   bg = bg_col,
   options = list(
     opts_tooltip(
+      delay_mouseover = 500,
       opacity = 1, use_fill = TRUE,
       css = glue("
         padding: 5pt;
@@ -185,7 +190,7 @@ girafe(
         point = glue("
           stroke: {text_col};
           stroke-opacity: 1;
-          stroke-width: 3px;
+          stroke-width: 5px;
           fill: {text_col};
           fill-opacity: 1")
       )
@@ -193,3 +198,58 @@ girafe(
   )
 )
 ```
+
+::: {.centered-text}
+
+::: {.bigger-text}
+[**More alike, but more unequal**]{style="color:#00344A;"} 
+:::
+
+[The share of income received by the richest 1% of the population where income is measured before payment of taxes and non-pension benefits but after the payment of public and private pensions. Countries are becoming more similar in their wealth inequality, but more unequal on average.]{style="color:#00344A;"} 
+
+[Select a country using the dropwdown menu:]{style="color:#00344A;"} 
+:::
+
+```{r}
+browsable(
+  tagList(
+    dropdown_html,
+    g_girafe,
+    tags$script(HTML("
+      document.getElementById('dropdown').addEventListener('change', function() {
+        const selected = this.value;
+        document.querySelectorAll('[data-id]').forEach(el => {
+          if (el.getAttribute('data-id') === selected) {
+            el.setAttribute('stroke', '#00344A');
+            el.setAttribute('stroke-opacity', '1');
+            el.setAttribute('stroke-width', '5');
+            el.setAttribute('fill', '#00344A');
+            el.setAttribute('fill-opacity', '1');
+          } else {
+            el.setAttribute('stroke', '#00344A');
+            el.setAttribute('stroke-opacity', '0.1');
+            el.setAttribute('stroke-width', '0');
+            el.setAttribute('fill', '#00344A');
+            el.setAttribute('fill-opacity', '0.1');
+          }
+        });
+      });
+    "))
+  )
+)
+```
+
+```{css}
+.centered-text {
+  text-align: center;
+}
+.bigger-text {
+  font-size: x-large;
+}
+#dropdown {
+  border-radius: 4px;
+  border: 2px solid #AAAAAA;
+  padding-bottom: 2px;
+}
+```
+
