@@ -1,14 +1,3 @@
----
-title: "Periodic Table of Elements"
-execute:
-  echo: false
-fig-height: 6
-fig-width: 7
-fig-dpi: 300
-format:
-  html:
-    embed-resources: true
----
 
 ```{r}
 #| message: false
@@ -29,7 +18,7 @@ library(geofacet)
 #| warning: false
 # Data
 elements <- readr::read_csv("https://raw.githubusercontent.com/andrejewski/periodic-table/refs/heads/master/data.csv")
-elements_grid <- readr::read_csv("data/periodic-table-grid.csv")
+elements_grid <- readr::read_csv("Periodic Table/data/periodic-table-grid.csv")
 ```
 
 ```{r}
