@@ -78,7 +78,7 @@ execute:
 ![](ESA Little Pictures/esa-little-pictures.png){width="100%"}
 
 
-## Heatmap Blanket Knitting Pattern
+## Heatmap Blanket Pattern
 
 ::: {.grid}
 

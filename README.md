@@ -72,7 +72,7 @@
 </p>
 
 
-## Heatmap Blanket Knitting Pattern
+## Heatmap Blanket Pattern
 
 <p align="center">
   <img src="Heatmap Blanket Pattern/images/heatmap-blanket-pattern.png" width="48%">
