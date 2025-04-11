@@ -1,9 +1,9 @@
 library(tidyverse)
 
-# Data from HADCET: https://www.metoffice.gov.uk/hadobs/hadcet/data/meantemp_monthly_totals.txt
+# Data from HADCET: # https://www.metoffice.gov.uk/hadobs/hadcet/data/legacy/cetml1659on.dat
 df <- as_tibble(
-  read.table("Heatmap Blanket Pattern/data/meantemp_monthly_totals.txt",
-    header = F, skip = 5
+  read.table("Heatmap Blanket Pattern/data/cetml1659on.dat.txt",
+    header = F, skip = 7
   )
 )
 colnames(df) <- c(
@@ -12,6 +12,7 @@ colnames(df) <- c(
   "Jul", "Aug", "Sep", "Oct", "Nov", "Dec",
   "avg"
 )
+
 plot_data <- df |>
   mutate(decade = 10 * floor(year / 10)) |>
   pivot_longer(
