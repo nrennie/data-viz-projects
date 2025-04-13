@@ -90,10 +90,10 @@ g <- ggplot() +
     data = plot_data,
     mapping = aes(
       x = Income, y = as.factor(Year), data_id = Country,
-      tooltip = tooltip_label, colour = Country
+      tooltip = tooltip_label
     ),
-    alpha = 0.3,
-    size = 0.75
+    alpha = 0,
+    size = 3
   ) +
   coord_flip() +
   scale_fill_gradient2(
@@ -171,20 +171,9 @@ g_girafe <- girafe(
         border-color: {text_col};
         border-width: 2px")
     ),
-    opts_hover_inv(css = "opacity: 0.1"),
+    opts_hover(css = "fill:#00344A;"),
     opts_toolbar(saveaspng = FALSE),
-    opts_zoom(max = 1),
-    opts_hover(
-      css = girafe_css(
-        css = glue("stroke:{text_col};fill:{text_col};fill-opacity: 1"),
-        point = glue("
-          stroke: {text_col};
-          stroke-opacity: 1;
-          stroke-width: 5px;
-          fill: {text_col};
-          fill-opacity: 1")
-      )
-    )
+    opts_zoom(max = 1)
   )
 )
 ```
@@ -210,17 +199,12 @@ browsable(
         const selected = this.value;
         document.querySelectorAll('[data-id]').forEach(el => {
           if (el.getAttribute('data-id') === selected) {
-            el.setAttribute('stroke', '#00344A');
+            el.setAttribute('style', 'display:block;');
             el.setAttribute('stroke-opacity', '1');
-            el.setAttribute('stroke-width', '5');
             el.setAttribute('fill', '#00344A');
             el.setAttribute('fill-opacity', '1');
           } else {
-            el.setAttribute('stroke', '#00344A');
-            el.setAttribute('stroke-opacity', '0.1');
-            el.setAttribute('stroke-width', '0');
-            el.setAttribute('fill', '#00344A');
-            el.setAttribute('fill-opacity', '0.1');
+            el.setAttribute('style', 'display:none;');
           }
         });
       });
