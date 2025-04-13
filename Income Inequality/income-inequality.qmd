@@ -251,7 +251,7 @@ g1995 <- ggplot() +
     low = "#00567A", high = highlight_col
   ) +
   scale_colour_manual(values = rep("#00567A", length(unique(plot_data$Country)))) +
-  scale_y_discrete() +
+  scale_y_discrete(expand = expansion(mult = c(0, 0), add = c(0, 0.3))) +
   scale_x_continuous(limits = c(0, 35), expand = c(0, 0)) +
   labs(
     x = "% of income received by richest 1%", y = "",
@@ -266,6 +266,7 @@ g1995 <- ggplot() +
     panel.background = element_rect(fill = bg_col, colour = bg_col),
     panel.grid = element_blank(),
     axis.text = element_text(size = rel(0.7)),
+    axis.text.x = element_text(margin = margin(t = 5)),
     text = element_text(colour = text_col)
   )
 ```
@@ -280,12 +281,12 @@ g1995 <- ggplot() +
 ```{r}
 g1995a <- g1995 +
   annotate(
-    geom = "text", x = 10, y = 1.2,
-    label = "Test", colour = text_col, family = body_font
+    geom = "text", x = 6, y = 1.2,
+    label = "Lower income\ninequality", colour = text_col, family = body_font
   ) +
   annotate(
-    geom = "text", x = 23, y = 1.2,
-    label = "Test", colour = text_col, family = body_font
+    geom = "text", x = 26, y = 1.2,
+    label = "Higher income\ninequality", colour = text_col, family = body_font
   )
 suppressMessages(print(g1995a))
 ```
@@ -295,13 +296,9 @@ suppressMessages(print(g1995a))
 
 ::: {.g-col-12 .g-col-md-6}
 
-Let's start by looking at just one of the curved lines - single year.
+In this chart, the horizontal (x) axis shows different years from 1980 to 2023. Not all countries have data for all years. For each year, you should see a curved line with the area underneath shaded red or blue. Let's start by looking at just one of the curved lines for single year, 1995.
 
-The vertical (y) axis shows the percentage of each countries income (% income) that was received by the richest 1% of the country's population in that year.
-
-Higher values mean a more unequal distribution of income.
-
-Colours
+The vertical (y) axis shows the percentage of each countries income (% income) that was received by the richest 1% of the country's population in that year. The colours show the same thing. Higher (red) values mean a more unequal distribution of income. Lower (blue) values mean a more equal distribution of income.
 
 :::
 
@@ -314,7 +311,7 @@ Colours
 
 The curved lines show what % income is common. Higher *peaks* mean more countries have that value. For example, in 1995 lots of countries have a % income around 10% and lots have a % income around 23%. In 2023, all countries are a bit more similar, and have a value of around 15%. 
 
-These lines do not change when selecting a different country.
+These lines do not change when selecting a different country using the dropdown.
 
 :::
 
@@ -324,11 +321,15 @@ These lines do not change when selecting a different country.
 g1995b <- g1995 +
   annotate(
     geom = "text", x = 10, y = 1.2,
-    label = "density", colour = text_col, family = body_font
+    label = "10% is a very common\nvalue", colour = text_col, family = body_font
   ) +
   annotate(
     geom = "text", x = 23, y = 1.2,
-    label = "Test", colour = text_col, family = body_font
+    label = "23% is a quite\ncommon value", colour = text_col, family = body_font
+  ) +
+  annotate(
+    geom = "text", x = 32, y = 1.2,
+    label = "32% is a less\ncommon value", colour = text_col, family = body_font
   )
 suppressMessages(print(g1995b))
 ```
@@ -347,9 +348,7 @@ suppressMessages(print(g1995b))
 
 ::: {.g-col-12 .g-col-md-6}
 
-In this chart, the horizontal (x) axis shows different years from 1980 to 2023. Not all countries have data for all years.
-
-The points that are highlighted when hovering or selecting via the dropdown show the values for specific country in each year where data is available. Going from left to right when looking at the points allows you to see how it is changing over time. Points going upwards, means that country is becoming more unequal.
+The points that are shown when you select a country from the dropdown show the values for that country in each year where data is available. Going from left to right when looking at the points allows you to see how it is changing over time. Points going upwards, means that country is becoming more unequal.
 
 Looking at how a specific point for a year compares to the curve let's you see how it compares to all other countries in that year. For example a value of 8% is quite common in 1980, but not very common in 2023.
 
