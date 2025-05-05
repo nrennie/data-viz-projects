@@ -10,7 +10,7 @@ books <- readr::read_csv("Reading Calendar/data/storygraph.csv") |>
 
 # data wrangling
 books_data <- books |>
-  select(dates_read, read_status) |>
+  select(dates_read, read_status, tags) |>
   filter(read_status == "read") |>
   separate_wider_delim(dates_read,
     delim = "-", names = c("start_date", "end_date"),
@@ -18,14 +18,18 @@ books_data <- books |>
   ) |>
   drop_na() |>
   mutate(
+    tags = as.numeric(str_remove(tags, "-pages"))
+  ) |> 
+  rename(pages = tags) |> 
+  mutate(
     start_date = ymd(start_date),
     end_date = ymd(end_date),
     start_year = year(start_date),
     end_year = year(end_date)
   ) |>
   filter(
-    start_year %in% 2021:2024,
-    end_year %in% 2021:2024
+    start_year %in% 2021:2025,
+    end_year %in% 2021:2025
   ) |>
   mutate(
     start_date = ymd(glue("1900/{month(start_date)}/{mday(start_date)}")),
@@ -74,16 +78,15 @@ ggplot() +
       ymin = 0,
       ymax = 1,
       fill = col_start_year,
-      colour = col_start_year
+      alpha = pages
     ),
-    alpha = 0.6,
-    linewidth = 0.5
+    linewidth = 0.3,
+    colour = bg_col
   ) +
   scale_x_date(
     limits = ymd(c("19000101", "19001231"))
   ) +
-  scale_fill_pretty_d(palette = "Celestial") +
-  scale_colour_pretty_d(palette = "Celestial") +
+  scale_fill_pretty_d(palette = "Disco") +
   facet_wrap(~start_year, ncol = 1) +
   coord_cartesian(expand = FALSE) +
   theme_void() +
