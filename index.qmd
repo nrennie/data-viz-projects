@@ -16,6 +16,10 @@ execute:
   echo: false
 ---
 
+## xkcd Colors
+
+![](xkcd Colors/images/xkcd-colors.png){width="100%"}
+
 ## Periodic Table
 
 {{< include "Periodic Table/periodic-table.qmd" >}}
