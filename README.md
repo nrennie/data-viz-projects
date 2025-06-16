@@ -1,5 +1,12 @@
 # Data Viz Projects
 
+
+## xkcd Colors
+
+<p align="center">
+  <img src="xkcd Colors/images/xkcd-colors.png" width="100%">
+</p>
+
 ## Periodic Table
 
 <p align="center">
