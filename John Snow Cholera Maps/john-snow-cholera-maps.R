@@ -12,6 +12,7 @@ library(ggtext)
 library(nrBrand)
 library(ggnewscale)
 library(showtext)
+library(HistData)
 
 
 # Load fonts --------------------------------------------------------------
@@ -23,7 +24,10 @@ showtext_auto()
 
 # Load data ---------------------------------------------------------------
 
-cases <- read_xlsx("John Snow Cholera Maps/data/John_Snow_1854_cases.xlsx")
+cases <- HistData::Snow.deaths
+
+# Data downloaded from https://johnsnowsociety.org/jss_mapcompetition/
+# cases <- read_xlsx("John Snow Cholera Maps/data/John_Snow_1854_cases.xlsx")
 pumps <- read_sf("John Snow Cholera Maps/data/SnowGIS/Pumps.shp")
 deaths <- read_sf("John Snow Cholera Maps/data/SnowGIS/Cholera_Deaths.shp")
 OSMap <- rast("John Snow Cholera Maps/data/SnowGIS/OSMap_Grayscale.tif")
@@ -202,6 +206,7 @@ pumps_map +
           family = "quattrocento",
           margin = margin(l = 8, r = 5, t = 15, b = 5),
         ),
+        legend.ticks = element_blank(),
         plot.margin = margin(t = -26))
 
 
