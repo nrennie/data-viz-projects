@@ -74,6 +74,23 @@ execute:
 
 ![](Poetry/images/still-i-rise.png){width="100%"}
 
+## General Health
+
+::: {.grid}
+
+::: {.g-col-12 .g-col-md-6}
+
+![](General Health/images/general-health-2021-census-a.png){width="100%"}
+
+:::
+
+::: {.g-col-12 .g-col-md-6}
+
+![](General Health/images/general-health-2021-census-b.png){width="100%"}
+
+:::
+
+:::
 
 ## Reading Shelf
 
