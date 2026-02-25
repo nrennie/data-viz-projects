@@ -17,3 +17,5 @@ recording/
 *_files/
 *.ttf
 */data/
+rosm.cache/
+Map of Edinburgh/*.jpg
