@@ -1,0 +1,15 @@
+{
+  "hash": "f6662fcf35e384c7b7f19357e8819cb3",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"U.S. Judges\"\nsubtitle: \"Interactive D3.js chart embedded as an iframe\"\nexecute: \n  echo: false\n  eval: true\n  warning: false\n  message: false\n  freeze: auto\nengine: knitr\nresources: \n  - script.js\n  - data.csv\n---\n\n```{=html}\n<div class=\"container\">\n<iframe class=\"responsive-iframe\" src=\"us-judges.html\" scrolling=\"no\" allowtransparency=\"true\"></iframe>\n</div>\n```\n\n\n::: {.cell}\n<style type=\"text/css\">\n.container {\n    position: relative;\n    overflow: hidden;\n    width: 100%;\n    padding-top: 100%;\n}\n\n.responsive-iframe {\n    position: absolute;\n    top: 0;\n    left: 0;\n    bottom: 0;\n    right: 0;\n    width: 100%;\n    height: 80%;\n    max-height: 500px !important;\n    max-width: 600px !important;\n}\n</style>\n:::\n\n\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

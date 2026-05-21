@@ -99,7 +99,7 @@ Summary of my most used R functions and packages in [TidyTuesday visualisations]
 
 ### Circography
 
-![](circography/images/circography.png){width="100%"}
+![](circography-maps/images/circography.png){width="100%"}
 
 ### Forest of Bowland
 

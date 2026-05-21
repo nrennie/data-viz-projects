@@ -22,6 +22,8 @@ website:
             href: local-council-elections/index.qmd
           - text: Periodic table
             href: periodic-table/index.qmd
+          - text: U.S. Judges
+            href: us-judges/index.qmd
   page-footer: "© Nicola Rennie. 2026.<br>Except where otherwise noted, content on this site is licensed under a [Creative Commons Attribution 4.0 International license](https://creativecommons.org/licenses/by/4.0/)."
 
 format:
