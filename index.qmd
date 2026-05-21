@@ -124,7 +124,9 @@ Explore the [interactive version](/periodic-table/).
 :::
 
 
-## #TidyTuesday Wrapped
+## TidyTuesday Wrapped
+
+Summary of my most used R functions and packages in [TidyTuesday visualisations](https://github.com/nrennie/tidytuesday), inspired by Spotify Wrapped.
 
 ::: {.grid}
 

@@ -7,74 +7,11 @@
     "text": "This site hosts a collection of my miscellaneous data visualisation projects. This home page includes all static charts, but you can also explore different interactive visualisations via the Interactive projects tab."
   },
   {
-    "objectID": "index.html#history-of-the-akimel-oodham",
-    "href": "index.html#history-of-the-akimel-oodham",
-    "title": "Data Visualisation Projects",
-    "section": "History of the Akimel O’odham",
-    "text": "History of the Akimel O’odham"
-  },
-  {
-    "objectID": "index.html#xkcd-colors",
-    "href": "index.html#xkcd-colors",
-    "title": "Data Visualisation Projects",
-    "section": "xkcd Colors",
-    "text": "xkcd Colors"
-  },
-  {
-    "objectID": "index.html#shakespeares-sonnets",
-    "href": "index.html#shakespeares-sonnets",
-    "title": "Data Visualisation Projects",
-    "section": "Shakespeare’s Sonnets",
-    "text": "Shakespeare’s Sonnets"
-  },
-  {
     "objectID": "index.html#bob-ross-paintings",
     "href": "index.html#bob-ross-paintings",
     "title": "Data Visualisation Projects",
     "section": "Bob Ross Paintings",
     "text": "Bob Ross Paintings"
-  },
-  {
-    "objectID": "index.html#nobel-prize-laureates",
-    "href": "index.html#nobel-prize-laureates",
-    "title": "Data Visualisation Projects",
-    "section": "Nobel Prize Laureates",
-    "text": "Nobel Prize Laureates"
-  },
-  {
-    "objectID": "index.html#typography-cartography",
-    "href": "index.html#typography-cartography",
-    "title": "Data Visualisation Projects",
-    "section": "Typography Cartography",
-    "text": "Typography Cartography"
-  },
-  {
-    "objectID": "index.html#lemur-family-tree",
-    "href": "index.html#lemur-family-tree",
-    "title": "Data Visualisation Projects",
-    "section": "Lemur Family Tree",
-    "text": "Lemur Family Tree"
-  },
-  {
-    "objectID": "index.html#poetry",
-    "href": "index.html#poetry",
-    "title": "Data Visualisation Projects",
-    "section": "Poetry",
-    "text": "Poetry"
-  },
-  {
-    "objectID": "index.html#general-health",
-    "href": "index.html#general-health",
-    "title": "Data Visualisation Projects",
-    "section": "General Health",
-    "text": "General Health"
-  },
-  {
-    "objectID": "index.html#reading-shelf",
-    "href": "index.html#reading-shelf",
-    "title": "Data Visualisation Projects",
-    "section": "Reading Shelf",
-    "text": "Reading Shelf"
   },
   {
     "objectID": "index.html#forest-of-bowland",
@@ -84,11 +21,11 @@
     "text": "Forest of Bowland"
   },
   {
-    "objectID": "index.html#sea-surface-temperatures",
-    "href": "index.html#sea-surface-temperatures",
+    "objectID": "index.html#general-health",
+    "href": "index.html#general-health",
     "title": "Data Visualisation Projects",
-    "section": "Sea Surface Temperatures",
-    "text": "Sea Surface Temperatures"
+    "section": "General Health",
+    "text": "General Health"
   },
   {
     "objectID": "index.html#heatmap-blanket-pattern",
@@ -98,11 +35,74 @@
     "text": "Heatmap Blanket Pattern"
   },
   {
+    "objectID": "index.html#history-of-the-akimel-oodham",
+    "href": "index.html#history-of-the-akimel-oodham",
+    "title": "Data Visualisation Projects",
+    "section": "History of the Akimel O’odham",
+    "text": "History of the Akimel O’odham"
+  },
+  {
+    "objectID": "index.html#income-inequality",
+    "href": "index.html#income-inequality",
+    "title": "Data Visualisation Projects",
+    "section": "Income Inequality",
+    "text": "Income Inequality\nExplore the interactive version."
+  },
+  {
+    "objectID": "index.html#lemur-family-tree",
+    "href": "index.html#lemur-family-tree",
+    "title": "Data Visualisation Projects",
+    "section": "Lemur Family Tree",
+    "text": "Lemur Family Tree"
+  },
+  {
+    "objectID": "index.html#local-council-elections",
+    "href": "index.html#local-council-elections",
+    "title": "Data Visualisation Projects",
+    "section": "Local council elections",
+    "text": "Local council elections\nExplore the interactive version."
+  },
+  {
     "objectID": "index.html#london-marathon",
     "href": "index.html#london-marathon",
     "title": "Data Visualisation Projects",
     "section": "London Marathon",
     "text": "London Marathon"
+  },
+  {
+    "objectID": "index.html#nobel-prize-laureates",
+    "href": "index.html#nobel-prize-laureates",
+    "title": "Data Visualisation Projects",
+    "section": "Nobel Prize Laureates",
+    "text": "Nobel Prize Laureates"
+  },
+  {
+    "objectID": "index.html#periodic-table",
+    "href": "index.html#periodic-table",
+    "title": "Data Visualisation Projects",
+    "section": "Periodic Table",
+    "text": "Periodic Table\nExplore the interactive version."
+  },
+  {
+    "objectID": "index.html#poetry",
+    "href": "index.html#poetry",
+    "title": "Data Visualisation Projects",
+    "section": "Poetry",
+    "text": "Poetry"
+  },
+  {
+    "objectID": "index.html#reading-shelf",
+    "href": "index.html#reading-shelf",
+    "title": "Data Visualisation Projects",
+    "section": "Reading Shelf",
+    "text": "Reading Shelf\n ## Sea Surface Temperatures"
+  },
+  {
+    "objectID": "index.html#shakespeares-sonnets",
+    "href": "index.html#shakespeares-sonnets",
+    "title": "Data Visualisation Projects",
+    "section": "Shakespeare’s Sonnets",
+    "text": "Shakespeare’s Sonnets"
   },
   {
     "objectID": "index.html#tidytuesday-wrapped",
@@ -112,11 +112,25 @@
     "text": "#TidyTuesday Wrapped"
   },
   {
+    "objectID": "index.html#typography-cartography",
+    "href": "index.html#typography-cartography",
+    "title": "Data Visualisation Projects",
+    "section": "Typography Cartography",
+    "text": "Typography Cartography"
+  },
+  {
     "objectID": "index.html#western-states-100",
     "href": "index.html#western-states-100",
     "title": "Data Visualisation Projects",
     "section": "Western States 100",
-    "text": "Western States 100\n\nThe source code for all charts can be found on GitHub."
+    "text": "Western States 100"
+  },
+  {
+    "objectID": "index.html#xkcd-colors",
+    "href": "index.html#xkcd-colors",
+    "title": "Data Visualisation Projects",
+    "section": "xkcd Colors",
+    "text": "xkcd Colors\n\nThe source code for all charts can be found on GitHub."
   },
   {
     "objectID": "income-inequality/index.html",
