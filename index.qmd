@@ -173,7 +173,7 @@ Heatmap of HADCET data designed in R, then crocheted with yarn.
 
 ### Poetry
 
-![](poetry/images/still-i-rise.png){width="100%"}
+![](poetry/images/still-i-rise-v1.png){width="100%"}
 
 
 ### Shakespeare's Sonnets
