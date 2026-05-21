@@ -7,18 +7,70 @@ execute:
 
 This site hosts a collection of [my](https://nrennie.rbind.io/) miscellaneous data visualisation projects. This home page includes all static charts, but you can also explore different interactive visualisations via the *Interactive projects* tab.
 
+## Static charts
 
-## Bob Ross Paintings
+### History of the Akimel O’odham
 
-![](Bob Ross Paintings/images/bob-ross-paintings.png){width="100%"}
+![](History of the Akimel O’odham/images/history.png){width="100%"}
 
 
-## Forest of Bowland
+### Lemur Family Tree
+
+![](Lemur Family Tree/images/lemur-family-tree.png){width="100%"}
+
+
+### London Marathon
+
+![](London Marathon/images/london-marathon.jpg){width="100%"}
+
+
+### Nobel Prize Laureates
+
+![](Nobel Prize Laureates/images/nobel_light_mode.png){width="100%"}
+
+
+### Reading Shelf
+
+![](Reading Shelf/images/reading-shelf.png){width="100%"}
+
+### Sea Surface Temperatures
+
+![](ESA Little Pictures/esa-little-pictures.png){width="100%"}
+
+### TidyTuesday Wrapped
+
+Summary of my most used R functions and packages in [TidyTuesday visualisations](https://github.com/nrennie/tidytuesday), inspired by Spotify Wrapped.
+
+::: {.grid}
+
+::: {.g-col-12 .g-col-md-6}
+![](TidyTuesday Wrapped/images/tidytuesday-wrapped-2023.png){width="100%"}
+:::
+
+::: {.g-col-12 .g-col-md-6}
+![](TidyTuesday Wrapped/images/tidytuesday-wrapped-2022.png){width="100%"}
+:::
+
+:::
+
+
+### Western States 100
+
+![](Western States 100/western-states-100.jpg){width="100%"}
+
+### xkcd Colors
+
+![](xkcd Colors/images/xkcd-colors.png){width="100%"}
+
+
+## Static maps
+
+### Forest of Bowland
 
 ![](Forest of Bowland/images/forest-of-bowland.png){width="100%"}
 
 
-## General Health
+### General Health
 
 ::: {.grid}
 
@@ -36,7 +88,22 @@ This site hosts a collection of [my](https://nrennie.rbind.io/) miscellaneous da
 
 :::
 
-## Heatmap Blanket Pattern
+
+### Typography Cartography
+
+![](Typography Cartography/images/typography-cartography.png){width="100%"}
+
+
+## Data art
+
+### Bob Ross Paintings
+
+Heatmap treemap of most common colours used in Bob Ross paintings.
+
+![](Bob Ross Paintings/images/bob-ross-paintings.png){width="100%"}
+
+
+### Heatmap Blanket Pattern
 
 ::: {.grid}
 
@@ -51,61 +118,12 @@ This site hosts a collection of [my](https://nrennie.rbind.io/) miscellaneous da
 :::
 
 
-## History of the Akimel O’odham
-
-![](History of the Akimel O’odham/images/history.png){width="100%"}
-
-
-## Income Inequality
-
-Explore the [interactive version](/income-inequality/).
-
-![](income-inequality/featured.png){width="100%"}
-
-
-## Lemur Family Tree
-
-![](Lemur Family Tree/images/lemur-family-tree.png){width="100%"}
-
-
-## Local council elections
-
-Explore the [interactive version](/local-council-elections/).
-
-![](local-council-elections/featured.png){width="100%"}
-
-
-## London Marathon
-
-![](London Marathon/images/london-marathon.jpg){width="100%"}
-
-
-## Nobel Prize Laureates
-
-![](Nobel Prize Laureates/images/nobel_light_mode.png){width="100%"}
-
-
-## Periodic Table
-
-Explore the [interactive version](/periodic-table/).
-
-![](periodic-table/featured.png){width="100%"}
-
-
-## Poetry
+### Poetry
 
 ![](Poetry/images/still-i-rise.png){width="100%"}
 
 
-## Reading Shelf
-
-![](Reading Shelf/images/reading-shelf.png){width="100%"}
-## Sea Surface Temperatures
-
-![](ESA Little Pictures/esa-little-pictures.png){width="100%"}
-
-
-## Shakespeare's Sonnets
+### Shakespeare's Sonnets
 
 ::: {.grid}
 
@@ -124,34 +142,31 @@ Explore the [interactive version](/periodic-table/).
 :::
 
 
-## TidyTuesday Wrapped
+## Interactive visualisations
 
-Summary of my most used R functions and packages in [TidyTuesday visualisations](https://github.com/nrennie/tidytuesday), inspired by Spotify Wrapped.
+### Income Inequality
 
-::: {.grid}
+Explore the [interactive version](/income-inequality/).
 
-::: {.g-col-12 .g-col-md-6}
-![](TidyTuesday Wrapped/images/tidytuesday-wrapped-2023.png){width="100%"}
-:::
-
-::: {.g-col-12 .g-col-md-6}
-![](TidyTuesday Wrapped/images/tidytuesday-wrapped-2022.png){width="100%"}
-:::
-
-:::
+![](income-inequality/featured.png){width="100%"}
 
 
-## Typography Cartography
+### Local Council Elections
 
-![](Typography Cartography/images/typography-cartography.png){width="100%"}
+Explore the [interactive version](/local-council-elections/).
+
+![](local-council-elections/featured.png){width="100%"}
 
 
-## Western States 100
+### Periodic Table
 
-![](Western States 100/western-states-100.jpg){width="100%"}
+Explore the [interactive version](/periodic-table/).
 
-## xkcd Colors
+![](periodic-table/featured.png){width="100%"}
 
-![](xkcd Colors/images/xkcd-colors.png){width="100%"}
+::: {.callout-tip}
 
 The source code for all charts can be found on [GitHub](https://github.com/nrennie/data-viz-projects).
+
+:::
+

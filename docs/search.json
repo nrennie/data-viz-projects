@@ -7,130 +7,32 @@
     "text": "This site hosts a collection of my miscellaneous data visualisation projects. This home page includes all static charts, but you can also explore different interactive visualisations via the Interactive projects tab."
   },
   {
-    "objectID": "index.html#bob-ross-paintings",
-    "href": "index.html#bob-ross-paintings",
+    "objectID": "index.html#static-charts",
+    "href": "index.html#static-charts",
     "title": "Data Visualisation Projects",
-    "section": "Bob Ross Paintings",
-    "text": "Bob Ross Paintings"
+    "section": "Static charts",
+    "text": "Static charts\n\nHistory of the Akimel O’odham\n\n\n\nLemur Family Tree\n\n\n\nLondon Marathon\n\n\n\nNobel Prize Laureates\n\n\n\nReading Shelf\n\n\n\nSea Surface Temperatures\n\n\n\nTidyTuesday Wrapped\nSummary of my most used R functions and packages in TidyTuesday visualisations, inspired by Spotify Wrapped.\n\n\n\n\n\n\n\n\n\n\nWestern States 100\n\n\n\nxkcd Colors"
   },
   {
-    "objectID": "index.html#forest-of-bowland",
-    "href": "index.html#forest-of-bowland",
+    "objectID": "index.html#static-maps",
+    "href": "index.html#static-maps",
     "title": "Data Visualisation Projects",
-    "section": "Forest of Bowland",
-    "text": "Forest of Bowland"
+    "section": "Static maps",
+    "text": "Static maps\n\nForest of Bowland\n\n\n\nGeneral Health\n\n\n\n\n\n\n\n\n\n\nTypography Cartography"
   },
   {
-    "objectID": "index.html#general-health",
-    "href": "index.html#general-health",
+    "objectID": "index.html#data-art",
+    "href": "index.html#data-art",
     "title": "Data Visualisation Projects",
-    "section": "General Health",
-    "text": "General Health"
+    "section": "Data art",
+    "text": "Data art\n\nBob Ross Paintings\nHeatmap treemap of most common colours used in Bob Ross paintings.\n\n\n\nHeatmap Blanket Pattern\n\n\n\n\n\n\n\n\n\n\nPoetry\n\n\n\nShakespeare’s Sonnets"
   },
   {
-    "objectID": "index.html#heatmap-blanket-pattern",
-    "href": "index.html#heatmap-blanket-pattern",
+    "objectID": "index.html#interactive-visualisations",
+    "href": "index.html#interactive-visualisations",
     "title": "Data Visualisation Projects",
-    "section": "Heatmap Blanket Pattern",
-    "text": "Heatmap Blanket Pattern"
-  },
-  {
-    "objectID": "index.html#history-of-the-akimel-oodham",
-    "href": "index.html#history-of-the-akimel-oodham",
-    "title": "Data Visualisation Projects",
-    "section": "History of the Akimel O’odham",
-    "text": "History of the Akimel O’odham"
-  },
-  {
-    "objectID": "index.html#income-inequality",
-    "href": "index.html#income-inequality",
-    "title": "Data Visualisation Projects",
-    "section": "Income Inequality",
-    "text": "Income Inequality\nExplore the interactive version."
-  },
-  {
-    "objectID": "index.html#lemur-family-tree",
-    "href": "index.html#lemur-family-tree",
-    "title": "Data Visualisation Projects",
-    "section": "Lemur Family Tree",
-    "text": "Lemur Family Tree"
-  },
-  {
-    "objectID": "index.html#local-council-elections",
-    "href": "index.html#local-council-elections",
-    "title": "Data Visualisation Projects",
-    "section": "Local council elections",
-    "text": "Local council elections\nExplore the interactive version."
-  },
-  {
-    "objectID": "index.html#london-marathon",
-    "href": "index.html#london-marathon",
-    "title": "Data Visualisation Projects",
-    "section": "London Marathon",
-    "text": "London Marathon"
-  },
-  {
-    "objectID": "index.html#nobel-prize-laureates",
-    "href": "index.html#nobel-prize-laureates",
-    "title": "Data Visualisation Projects",
-    "section": "Nobel Prize Laureates",
-    "text": "Nobel Prize Laureates"
-  },
-  {
-    "objectID": "index.html#periodic-table",
-    "href": "index.html#periodic-table",
-    "title": "Data Visualisation Projects",
-    "section": "Periodic Table",
-    "text": "Periodic Table\nExplore the interactive version."
-  },
-  {
-    "objectID": "index.html#poetry",
-    "href": "index.html#poetry",
-    "title": "Data Visualisation Projects",
-    "section": "Poetry",
-    "text": "Poetry"
-  },
-  {
-    "objectID": "index.html#reading-shelf",
-    "href": "index.html#reading-shelf",
-    "title": "Data Visualisation Projects",
-    "section": "Reading Shelf",
-    "text": "Reading Shelf\n ## Sea Surface Temperatures"
-  },
-  {
-    "objectID": "index.html#shakespeares-sonnets",
-    "href": "index.html#shakespeares-sonnets",
-    "title": "Data Visualisation Projects",
-    "section": "Shakespeare’s Sonnets",
-    "text": "Shakespeare’s Sonnets"
-  },
-  {
-    "objectID": "index.html#tidytuesday-wrapped",
-    "href": "index.html#tidytuesday-wrapped",
-    "title": "Data Visualisation Projects",
-    "section": "TidyTuesday Wrapped",
-    "text": "TidyTuesday Wrapped\nSummary of my most used R functions and packages in TidyTuesday visualisations, inspired by Spotify Wrapped."
-  },
-  {
-    "objectID": "index.html#typography-cartography",
-    "href": "index.html#typography-cartography",
-    "title": "Data Visualisation Projects",
-    "section": "Typography Cartography",
-    "text": "Typography Cartography"
-  },
-  {
-    "objectID": "index.html#western-states-100",
-    "href": "index.html#western-states-100",
-    "title": "Data Visualisation Projects",
-    "section": "Western States 100",
-    "text": "Western States 100"
-  },
-  {
-    "objectID": "index.html#xkcd-colors",
-    "href": "index.html#xkcd-colors",
-    "title": "Data Visualisation Projects",
-    "section": "xkcd Colors",
-    "text": "xkcd Colors\n\nThe source code for all charts can be found on GitHub."
+    "section": "Interactive visualisations",
+    "text": "Interactive visualisations\n\nIncome Inequality\nExplore the interactive version.\n\n\n\nLocal Council Elections\nExplore the interactive version.\n\n\n\nPeriodic Table\nExplore the interactive version.\n\n\n\n\n\n\n\nTip\n\n\n\nThe source code for all charts can be found on GitHub."
   },
   {
     "objectID": "income-inequality/index.html",
