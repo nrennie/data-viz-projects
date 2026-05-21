@@ -11,21 +11,21 @@
     "href": "index.html#static-charts",
     "title": "Data Visualisation Projects",
     "section": "Static charts",
-    "text": "Static charts\n\nHistory of the Akimel O’odham\n\n\n\nLemur Family Tree\n\n\n\nLondon Marathon\n\n\n\nNobel Prize Laureates\n\n\n\nReading Shelf\n\n\n\nSea Surface Temperatures\n\n\n\nTidyTuesday Wrapped\nSummary of my most used R functions and packages in TidyTuesday visualisations, inspired by Spotify Wrapped.\n\n\n\n\n\n\n\n\n\n\nWestern States 100\n\n\n\nxkcd Colors"
+    "text": "Static charts\n\nHistory of the Akimel O’odham\n\n\n\nLemur Family Tree\n\n\n\nLondon Marathon\n\n\n\nNobel Prize Laureates\n\n\n\nReading Shelf\n\n\n\nReddit’s al dente pasta\n\n\n\nSea Surface Temperatures\nSubmitted for the European Space Agency Little Pictures competition.\n\n\n\nStackOverflow Survey\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTidyTuesday Wrapped\nSummary of my most used R functions and packages in TidyTuesday visualisations, inspired by Spotify Wrapped.\n\n\n\n\n\n\n\n\n\n\nWestern States 100\n\n\n\nxkcd Colors"
   },
   {
     "objectID": "index.html#static-maps",
     "href": "index.html#static-maps",
     "title": "Data Visualisation Projects",
     "section": "Static maps",
-    "text": "Static maps\n\nForest of Bowland\n\n\n\nGeneral Health\n\n\n\n\n\n\n\n\n\n\nTypography Cartography"
+    "text": "Static maps\n\nCircography\n\n\n\nForest of Bowland\n\n\n\nGeneral Health\nTwo maps using Census 2021 data, one made with R and one made with Python.\n\n\n\n\n\n\n\n\n\n\nJohn Snow Cholera Map\n\n\n\nPhotomap of Edinburgh\n\n\n\nRegions in Boxes\n\n\n\nTypography Cartography"
   },
   {
     "objectID": "index.html#data-art",
     "href": "index.html#data-art",
     "title": "Data Visualisation Projects",
     "section": "Data art",
-    "text": "Data art\n\nBob Ross Paintings\nHeatmap treemap of most common colours used in Bob Ross paintings.\n\n\n\nHeatmap Blanket Pattern\n\n\n\n\n\n\n\n\n\n\nPoetry\n\n\n\nShakespeare’s Sonnets"
+    "text": "Data art\n\nBob Ross Paintings\nHeatmap treemap of most common colours used in Bob Ross paintings.\n\n\n\nHeatmap Blanket\nHeatmap of HADCET data designed in R, then crocheted with yarn.\n\n\n\n\n\n\n\n\n\n\nPoetry\n\n\n\nShakespeare’s Sonnets"
   },
   {
     "objectID": "index.html#interactive-visualisations",
