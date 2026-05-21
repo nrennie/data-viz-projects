@@ -11,31 +11,63 @@ This site hosts a collection of [my](https://nrennie.rbind.io/) miscellaneous da
 
 ### History of the Akimel O’odham
 
-![](History of the Akimel O’odham/images/history.png){width="100%"}
+![](history-akimel-oodham/images/history.png){width="100%"}
 
 
 ### Lemur Family Tree
 
-![](Lemur Family Tree/images/lemur-family-tree.png){width="100%"}
+![](lemur-family-tree/images/lemur-family-tree.png){width="100%"}
 
 
 ### London Marathon
 
-![](London Marathon/images/london-marathon.jpg){width="100%"}
+![](london-marathon/images/london-marathon.jpg){width="100%"}
 
 
 ### Nobel Prize Laureates
 
-![](Nobel Prize Laureates/images/nobel_light_mode.png){width="100%"}
+![](nobel-prize-laureates/images/nobel_light_mode.png){width="100%"}
 
 
 ### Reading Shelf
 
-![](Reading Shelf/images/reading-shelf.png){width="100%"}
+![](reading-shelf/images/reading-shelf.png){width="100%"}
+
+### Reddit's *al dente* pasta
+
+![](reddit-al-dente-pasta/images/pasta.png){width="100%"}
 
 ### Sea Surface Temperatures
 
-![](ESA Little Pictures/esa-little-pictures.png){width="100%"}
+Submitted for the European Space Agency Little Pictures competition.
+
+![](ESA-little-pictures/esa-little-pictures.png){width="100%"}
+
+### StackOverflow Survey
+
+::: {.grid}
+
+::: {.g-col-12 .g-col-md-6}
+![](stackoverflow-survey/so_age.png){width="100%"}
+:::
+
+::: {.g-col-12 .g-col-md-6}
+![](stackoverflow-survey/so_coding.png){width="100%"}
+:::
+
+:::
+
+::: {.grid}
+
+::: {.g-col-12 .g-col-md-6}
+![](stackoverflow-survey/so_education.png){width="100%"}
+:::
+
+::: {.g-col-12 .g-col-md-6}
+![](stackoverflow-survey/so_salary.png){width="100%"}
+:::
+
+:::
 
 ### TidyTuesday Wrapped
 
@@ -44,11 +76,11 @@ Summary of my most used R functions and packages in [TidyTuesday visualisations]
 ::: {.grid}
 
 ::: {.g-col-12 .g-col-md-6}
-![](TidyTuesday Wrapped/images/tidytuesday-wrapped-2023.png){width="100%"}
+![](tidytuesday-wrapped/images/tidytuesday-wrapped-2023.png){width="100%"}
 :::
 
 ::: {.g-col-12 .g-col-md-6}
-![](TidyTuesday Wrapped/images/tidytuesday-wrapped-2022.png){width="100%"}
+![](tidytuesday-wrapped/images/tidytuesday-wrapped-2022.png){width="100%"}
 :::
 
 :::
@@ -56,42 +88,61 @@ Summary of my most used R functions and packages in [TidyTuesday visualisations]
 
 ### Western States 100
 
-![](Western States 100/western-states-100.jpg){width="100%"}
+![](western-states-100/western-states-100.jpg){width="100%"}
 
 ### xkcd Colors
 
-![](xkcd Colors/images/xkcd-colors.png){width="100%"}
+![](xkcd-colors/images/xkcd-colors.png){width="100%"}
 
 
 ## Static maps
 
+### Circography
+
+![](circography/images/circography.png){width="100%"}
+
 ### Forest of Bowland
 
-![](Forest of Bowland/images/forest-of-bowland.png){width="100%"}
+![](forest-of-bowland/images/forest-of-bowland.png){width="100%"}
 
 
 ### General Health
+
+Two maps using Census 2021 data, one made with R and one made with Python.
 
 ::: {.grid}
 
 ::: {.g-col-12 .g-col-md-6}
 
-![](General Health/images/general-health-2021-census-a.png){width="100%"}
+![](general-health/images/general-health-2021-census-a.png){width="100%"}
 
 :::
 
 ::: {.g-col-12 .g-col-md-6}
 
-![](General Health/images/general-health-2021-census-b.png){width="100%"}
+![](general-health/images/general-health-2021-census-b.png){width="100%"}
 
 :::
 
 :::
+
+### John Snow Cholera Map
+
+![](john-snow-cholera-map/images/john-snow-cholera-map-nrennie.png){width="100%"}
+
+### Photomap of Edinburgh
+
+![](photo-map-edinburgh/images/map.png){width="100%"}
+
+
+### Regions in Boxes
+
+![](regions-in-boxes/images/scotland.png){width="100%"}
 
 
 ### Typography Cartography
 
-![](Typography Cartography/images/typography-cartography.png){width="100%"}
+![](typography-cartography/images/typography-cartography.png){width="100%"}
 
 
 ## Data art
@@ -100,19 +151,21 @@ Summary of my most used R functions and packages in [TidyTuesday visualisations]
 
 Heatmap treemap of most common colours used in Bob Ross paintings.
 
-![](Bob Ross Paintings/images/bob-ross-paintings.png){width="100%"}
+![](bob-ross-paintings/images/bob-ross-paintings.png){width="100%"}
 
 
-### Heatmap Blanket Pattern
+### Heatmap Blanket
+
+Heatmap of HADCET data designed in R, then crocheted with yarn.
 
 ::: {.grid}
 
 ::: {.g-col-12 .g-col-md-6}
-![](Heatmap Blanket Pattern/images/heatmap-blanket-pattern.png){width="100%"}
+![](heatmap-blanket/images/heatmap-blanket-pattern.png){width="100%"}
 :::
 
 ::: {.g-col-12 .g-col-md-6}
-![](Heatmap Blanket Pattern/images/heatmap-blanket.jpg){width="100%"}
+![](heatmap-blanket/images/heatmap-blanket.jpg){width="100%"}
 :::
 
 :::
@@ -120,7 +173,7 @@ Heatmap treemap of most common colours used in Bob Ross paintings.
 
 ### Poetry
 
-![](Poetry/images/still-i-rise.png){width="100%"}
+![](poetry/images/still-i-rise.png){width="100%"}
 
 
 ### Shakespeare's Sonnets
@@ -128,15 +181,15 @@ Heatmap treemap of most common colours used in Bob Ross paintings.
 ::: {.grid}
 
 ::: {.g-col-12 .g-col-md-4}
-![](Shakespeare's Sonnets/images/sonnetCLIII.png){width="100%"}
+![](shakespeares-sonnets/images/sonnetCLIII.png){width="100%"}
 :::
 
 ::: {.g-col-12 .g-col-md-4}
-![](Shakespeare's Sonnets/images/sonnetCXLIX.png){width="100%"}
+![](shakespeares-sonnets/images/sonnetCXLIX.png){width="100%"}
 :::
 
 ::: {.g-col-12 .g-col-md-4}
-![](Shakespeare's Sonnets/images/sonnetXVIII.png){width="100%"}
+![](shakespeares-sonnets/images/sonnetXVIII.png){width="100%"}
 :::
 
 :::
