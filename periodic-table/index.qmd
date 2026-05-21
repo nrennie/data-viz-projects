@@ -6,6 +6,7 @@ execute:
   eval: true
   warning: false
   message: false
+  freeze: auto
 ---
 
 ```{r}
@@ -27,7 +28,7 @@ library(geofacet)
 #| warning: false
 # Data
 elements <- readr::read_csv("https://raw.githubusercontent.com/andrejewski/periodic-table/refs/heads/master/data.csv")
-elements_grid <- readr::read_csv("Periodic Table/data/periodic-table-grid.csv")
+elements_grid <- readr::read_csv("data/periodic-table-grid.csv")
 ```
 
 ```{r}

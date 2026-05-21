@@ -1,10 +1,17 @@
 [
   {
-    "objectID": "local-council-elections/index.html",
-    "href": "local-council-elections/index.html",
-    "title": "Local council elections",
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Data Visualisation Projects",
     "section": "",
-    "text": "NoteOriginal article\n\n\n\nThe data in this chart, and the chart text, comes from a YouGov article on Labour’s voter coalition broke more to left than right at 2026 local elections, published on 21 May 2026. This chord diagram is inspired by the Sankey diagram in the original article."
+    "text": "This site hosts a collection of my miscellaneous data visualisation projects. This home page includes all static charts, but you can also explore different interactive visualisations via the Interactive projects tab."
+  },
+  {
+    "objectID": "index.html#history-of-the-akimel-oodham",
+    "href": "index.html#history-of-the-akimel-oodham",
+    "title": "Data Visualisation Projects",
+    "section": "History of the Akimel O’odham",
+    "text": "History of the Akimel O’odham"
   },
   {
     "objectID": "index.html#xkcd-colors",
@@ -109,6 +116,13 @@
     "href": "index.html#western-states-100",
     "title": "Data Visualisation Projects",
     "section": "Western States 100",
-    "text": "Western States 100"
+    "text": "Western States 100\n\nThe source code for all charts can be found on GitHub."
+  },
+  {
+    "objectID": "local-council-elections/index.html",
+    "href": "local-council-elections/index.html",
+    "title": "Local council elections",
+    "section": "",
+    "text": "NoteOriginal article\n\n\n\nThe data in this chart, and the chart text, comes from a YouGov article on Labour’s voter coalition broke more to left than right at 2026 local elections, published on 21 May 2026. This chord diagram is inspired by the Sankey diagram in the original article."
   }
 ]

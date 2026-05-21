@@ -6,6 +6,7 @@ execute:
   eval: true
   warning: false
   message: false
+  freeze: auto
 ---
 
 ::: {.callout-note}
