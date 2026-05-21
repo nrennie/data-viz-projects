@@ -1,0 +1,13 @@
+name,start,end,party,n
+Truman,1947-01-01,1953-01-20,Democratic,114
+Eisenhower,1953-01-20,1961-01-20,Republican,191
+Kennedy,1961-01-20,1963-11-22,Democratic,134
+Johnson,1963-11-22,1969-01-20,Democratic,187
+Nixon,1969-01-20,1974-08-09,Republican,239
+Ford,1974-08-09,1977-01-20,Republican,67
+Carter,1977-01-20,1981-01-20,Democratic,267
+Reagan,1981-01-20,1989-01-20,Republican,387
+Bush,1989-01-20,1993-01-20,Republican,194
+Clinton,1993-01-20,2001-01-20,Democratic,382
+Bush,2001-01-20,2009-01-20,Republican,329
+Obama,2009-01-20,2014-05-20,Democratic,281
