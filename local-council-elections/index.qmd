@@ -29,7 +29,7 @@ library(glue)
 ```
 
 ```{r}
-raw_data <- readr::read_csv("data.csv")
+raw_data <- readr::read_csv("data/data.csv")
 ```
 
 ```{r}
