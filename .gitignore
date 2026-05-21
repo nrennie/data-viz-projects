@@ -11,14 +11,15 @@
 *.txt
 *.html
 !index.html
-John Snow Cholera Maps/data/
-!Periodic Table/data/periodic-table-grid.csv
+john-snow-cholera-map/data/
+!periodic-table/periodic-table-grid.csv
 recording/
 *_files/
 *.ttf
 */data/
 rosm.cache/
-Map of Edinburgh/*.jpg
+photomap-edinburgh/*.jpg
 
 /.quarto/
 **/*.quarto_ipynb
+docs/
