@@ -1,11 +1,11 @@
 ---
-title: "Data Visualisation Projects"
-subtitle: "This site hosts a collection of my ([Nicola Rennie](https://nrennie.rbind.io/)) miscellaneous data visualisation projects. The source code for all charts can be found on [GitHub](https://github.com/nrennie/data-viz-projects)."
 lightbox: true
 execute:
   freeze: auto
   echo: false
 ---
+
+This site hosts a collection of [my](https://nrennie.rbind.io/) miscellaneous data visualisation projects. This home page includes all static charts, but you can also explore different interactive visualisations via the *Interactive projects* tab.
 
 ## History of the Akimel O’odham
 
@@ -128,3 +128,4 @@ execute:
 
 ![](Western States 100/western-states-100.jpg){width="100%"}
 
+The source code for all charts can be found on [GitHub](https://github.com/nrennie/data-viz-projects).

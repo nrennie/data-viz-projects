@@ -1,3 +1,12 @@
+---
+title: "Periodic table"
+subtitle: "Hover over the different elements to learn when they were discovered"
+execute: 
+  echo: false
+  eval: true
+  warning: false
+  message: false
+---
 
 ```{r}
 #| message: false
@@ -55,8 +64,6 @@ cap <- paste0(
 
 
 ```{r}
-#| warning: false
-# Wrangling
 plot_data <- elements |>
   mutate(
     year = if_else(
@@ -68,8 +75,6 @@ plot_data <- elements |>
 ```
 
 ```{r}
-#| message: false
-# Static plot
 g <- ggplot(
   data = plot_data
 ) +
@@ -125,9 +130,8 @@ g <- ggplot(
 
 ```{r}
 #| eval: false
-# Save
 ggsave(
-  filename = "Periodic Table/images/periodic_table.png",
+  filename = "periodic-table/images/periodic_table.png",
   plot = g,
   width = 7, height = 5,
   unit = "in", bg = bg_col
@@ -135,7 +139,6 @@ ggsave(
 ```
 
 ```{r}
-# Interactive plot
 g_int <- g + geom_rect_interactive(
   mapping = aes(
     xmin = 1500, xmax = xmax, ymin = 0, ymax = 1,
@@ -149,7 +152,6 @@ g_int <- g + geom_rect_interactive(
 ```{r}
 #| fig-width: 7
 #| fig-height: 5
-# Render interactive
 girafe(
   ggobj = g_int,
   bg = bg_col,

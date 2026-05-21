@@ -4,9 +4,9 @@ project:
   render:
   - "*.qmd"
   - "!Income Inequality/*.qmd"
-  - "!Periodic Table/*.qmd"
 
 website:
+  title: "Data Visualisation Projects"
   twitter-card: true
   open-graph: true
   image: "assets/img/featured.png"
@@ -15,10 +15,12 @@ website:
     right:
       - text: Home
         href: index.qmd
-      - text: Projects
+      - text: Interactive projects
         menu:
           - text: Local council elections
             href: local-council-elections/index.qmd
+          - text: Periodic table
+            href: periodic-table/index.qmd
   page-footer: "© Nicola Rennie. 2026.<br>Except where otherwise noted, content on this site is licensed under a [Creative Commons Attribution 4.0 International license](https://creativecommons.org/licenses/by/4.0/)."
 
 format:
