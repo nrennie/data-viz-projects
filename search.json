@@ -1,24 +1,10 @@
 [
   {
-    "objectID": "local-council-elections/index.html",
-    "href": "local-council-elections/index.html",
-    "title": "Local council elections",
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Data Visualisation Projects",
     "section": "",
-    "text": "NoteOriginal article\n\n\n\nThe data in this chart, and the chart text, comes from a YouGov article on Labour’s voter coalition broke more to left than right at 2026 local elections, published on 21 May 2026. This chord diagram is inspired by the Sankey diagram in the original article."
-  },
-  {
-    "objectID": "index.html#xkcd-colors",
-    "href": "index.html#xkcd-colors",
-    "title": "Data Visualisation Projects",
-    "section": "xkcd Colors",
-    "text": "xkcd Colors"
-  },
-  {
-    "objectID": "index.html#shakespeares-sonnets",
-    "href": "index.html#shakespeares-sonnets",
-    "title": "Data Visualisation Projects",
-    "section": "Shakespeare’s Sonnets",
-    "text": "Shakespeare’s Sonnets"
+    "text": "This site hosts a collection of my miscellaneous data visualisation projects. This home page includes all static charts, but you can also explore different interactive visualisations via the Interactive projects tab."
   },
   {
     "objectID": "index.html#bob-ross-paintings",
@@ -28,32 +14,11 @@
     "text": "Bob Ross Paintings"
   },
   {
-    "objectID": "index.html#nobel-prize-laureates",
-    "href": "index.html#nobel-prize-laureates",
+    "objectID": "index.html#forest-of-bowland",
+    "href": "index.html#forest-of-bowland",
     "title": "Data Visualisation Projects",
-    "section": "Nobel Prize Laureates",
-    "text": "Nobel Prize Laureates"
-  },
-  {
-    "objectID": "index.html#typography-cartography",
-    "href": "index.html#typography-cartography",
-    "title": "Data Visualisation Projects",
-    "section": "Typography Cartography",
-    "text": "Typography Cartography"
-  },
-  {
-    "objectID": "index.html#lemur-family-tree",
-    "href": "index.html#lemur-family-tree",
-    "title": "Data Visualisation Projects",
-    "section": "Lemur Family Tree",
-    "text": "Lemur Family Tree"
-  },
-  {
-    "objectID": "index.html#poetry",
-    "href": "index.html#poetry",
-    "title": "Data Visualisation Projects",
-    "section": "Poetry",
-    "text": "Poetry"
+    "section": "Forest of Bowland",
+    "text": "Forest of Bowland"
   },
   {
     "objectID": "index.html#general-health",
@@ -63,32 +28,39 @@
     "text": "General Health"
   },
   {
-    "objectID": "index.html#reading-shelf",
-    "href": "index.html#reading-shelf",
-    "title": "Data Visualisation Projects",
-    "section": "Reading Shelf",
-    "text": "Reading Shelf"
-  },
-  {
-    "objectID": "index.html#forest-of-bowland",
-    "href": "index.html#forest-of-bowland",
-    "title": "Data Visualisation Projects",
-    "section": "Forest of Bowland",
-    "text": "Forest of Bowland"
-  },
-  {
-    "objectID": "index.html#sea-surface-temperatures",
-    "href": "index.html#sea-surface-temperatures",
-    "title": "Data Visualisation Projects",
-    "section": "Sea Surface Temperatures",
-    "text": "Sea Surface Temperatures"
-  },
-  {
     "objectID": "index.html#heatmap-blanket-pattern",
     "href": "index.html#heatmap-blanket-pattern",
     "title": "Data Visualisation Projects",
     "section": "Heatmap Blanket Pattern",
     "text": "Heatmap Blanket Pattern"
+  },
+  {
+    "objectID": "index.html#history-of-the-akimel-oodham",
+    "href": "index.html#history-of-the-akimel-oodham",
+    "title": "Data Visualisation Projects",
+    "section": "History of the Akimel O’odham",
+    "text": "History of the Akimel O’odham"
+  },
+  {
+    "objectID": "index.html#income-inequality",
+    "href": "index.html#income-inequality",
+    "title": "Data Visualisation Projects",
+    "section": "Income Inequality",
+    "text": "Income Inequality\nExplore the interactive version."
+  },
+  {
+    "objectID": "index.html#lemur-family-tree",
+    "href": "index.html#lemur-family-tree",
+    "title": "Data Visualisation Projects",
+    "section": "Lemur Family Tree",
+    "text": "Lemur Family Tree"
+  },
+  {
+    "objectID": "index.html#local-council-elections",
+    "href": "index.html#local-council-elections",
+    "title": "Data Visualisation Projects",
+    "section": "Local council elections",
+    "text": "Local council elections\nExplore the interactive version."
   },
   {
     "objectID": "index.html#london-marathon",
@@ -98,11 +70,53 @@
     "text": "London Marathon"
   },
   {
+    "objectID": "index.html#nobel-prize-laureates",
+    "href": "index.html#nobel-prize-laureates",
+    "title": "Data Visualisation Projects",
+    "section": "Nobel Prize Laureates",
+    "text": "Nobel Prize Laureates"
+  },
+  {
+    "objectID": "index.html#periodic-table",
+    "href": "index.html#periodic-table",
+    "title": "Data Visualisation Projects",
+    "section": "Periodic Table",
+    "text": "Periodic Table\nExplore the interactive version."
+  },
+  {
+    "objectID": "index.html#poetry",
+    "href": "index.html#poetry",
+    "title": "Data Visualisation Projects",
+    "section": "Poetry",
+    "text": "Poetry"
+  },
+  {
+    "objectID": "index.html#reading-shelf",
+    "href": "index.html#reading-shelf",
+    "title": "Data Visualisation Projects",
+    "section": "Reading Shelf",
+    "text": "Reading Shelf\n ## Sea Surface Temperatures"
+  },
+  {
+    "objectID": "index.html#shakespeares-sonnets",
+    "href": "index.html#shakespeares-sonnets",
+    "title": "Data Visualisation Projects",
+    "section": "Shakespeare’s Sonnets",
+    "text": "Shakespeare’s Sonnets"
+  },
+  {
     "objectID": "index.html#tidytuesday-wrapped",
     "href": "index.html#tidytuesday-wrapped",
     "title": "Data Visualisation Projects",
-    "section": "#TidyTuesday Wrapped",
-    "text": "#TidyTuesday Wrapped"
+    "section": "TidyTuesday Wrapped",
+    "text": "TidyTuesday Wrapped\nSummary of my most used R functions and packages in TidyTuesday visualisations, inspired by Spotify Wrapped."
+  },
+  {
+    "objectID": "index.html#typography-cartography",
+    "href": "index.html#typography-cartography",
+    "title": "Data Visualisation Projects",
+    "section": "Typography Cartography",
+    "text": "Typography Cartography"
   },
   {
     "objectID": "index.html#western-states-100",
@@ -110,5 +124,26 @@
     "title": "Data Visualisation Projects",
     "section": "Western States 100",
     "text": "Western States 100"
+  },
+  {
+    "objectID": "index.html#xkcd-colors",
+    "href": "index.html#xkcd-colors",
+    "title": "Data Visualisation Projects",
+    "section": "xkcd Colors",
+    "text": "xkcd Colors\n\nThe source code for all charts can be found on GitHub."
+  },
+  {
+    "objectID": "income-inequality/index.html",
+    "href": "income-inequality/index.html",
+    "title": "Income inequality",
+    "section": "",
+    "text": "More alike, but more unequal\n\nThe share of income received by the richest 1% of the population where income is measured before payment of taxes and non-pension benefits but after the payment of public and private pensions. Countries are becoming more similar in their wealth inequality, but more unequal on average.\nHighlight a country using the dropdown menu:\n\n\n\n\n\nAfghanistan\nAlbania\nAlgeria\nAndorra\nAngola\nAnguilla\nAntigua and Barbuda\nArgentina\nArmenia\nAruba\nAustralia\nAustria\nAzerbaijan\nBahamas\nBahrain\nBangladesh\nBarbados\nBelarus\nBelgium\nBelize\nBenin\nBermuda\nBhutan\nBolivia\nBonaire Sint Eustatius and Saba\nBosnia and Herzegovina\nBotswana\nBrazil\nBritish Virgin Islands\nBrunei\nBulgaria\nBurkina Faso\nBurundi\nCambodia\nCameroon\nCanada\nCape Verde\nCayman Islands\nCentral African Republic\nChad\nChile\nChina\nColombia\nComoros\nCongo\nCosta Rica\nCroatia\nCuba\nCuracao\nCyprus\nCzechia\nDemocratic Republic of Congo\nDenmark\nDjibouti\nDominica\nDominican Republic\nEast Germany\nEast Timor\nEcuador\nEgypt\nEl Salvador\nEquatorial Guinea\nEritrea\nEstonia\nEswatini\nEthiopia\nFiji\nFinland\nFrance\nFrench Polynesia\nGabon\nGambia\nGeorgia\nGermany\nGhana\nGibraltar\nGreece\nGreenland\nGrenada\nGuatemala\nGuernsey\nGuinea\nGuinea-Bissau\nGuyana\nHaiti\nHonduras\nHong Kong\nHungary\nIceland\nIndia\nIndonesia\nIran\nIraq\nIreland\nIsle of Man\nIsrael\nItaly\nIvory Coast\nJamaica\nJapan\nJersey\nJordan\nKazakhstan\nKenya\nKiribati\nKosovo\nKuwait\nKyrgyzstan\nLaos\nLatvia\nLebanon\nLesotho\nLiberia\nLibya\nLiechtenstein\nLithuania\nLuxembourg\nMacao\nMadagascar\nMalawi\nMalaysia\nMaldives\nMali\nMalta\nMarshall Islands\nMauritania\nMauritius\nMexico\nMicronesia\nMoldova\nMonaco\nMongolia\nMontenegro\nMontserrat\nMorocco\nMozambique\nMyanmar\nNamibia\nNauru\nNepal\nNetherlands\nNew Caledonia\nNew Zealand\nNicaragua\nNiger\nNigeria\nNorth Korea\nNorth Macedonia\nNorway\nOman\nPakistan\nPalau\nPalestine\nPanama\nPapua New Guinea\nParaguay\nPeru\nPhilippines\nPoland\nPortugal\nPuerto Rico\nQatar\nRomania\nRussia\nRwanda\nSaint Kitts and Nevis\nSaint Lucia\nSaint Vincent and the Grenadines\nSamoa\nSan Marino\nSao Tome and Principe\nSaudi Arabia\nSenegal\nSerbia\nSeychelles\nSierra Leone\nSingapore\nSint Maarten (Dutch part)\nSlovakia\nSlovenia\nSolomon Islands\nSomalia\nSouth Africa\nSouth Korea\nSouth Sudan\nSpain\nSri Lanka\nSudan\nSuriname\nSweden\nSwitzerland\nSyria\nTaiwan\nTajikistan\nTanzania\nThailand\nTogo\nTonga\nTrinidad and Tobago\nTunisia\nTurkey\nTurkmenistan\nTurks and Caicos Islands\nTuvalu\nUganda\nUkraine\nUnited Arab Emirates\nUnited Kingdom\nUnited States\nUruguay\nUzbekistan\nVanuatu\nVenezuela\nVietnam\nYemen\nZambia\nZimbabwe\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTipHow do I read this chart?\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nIn this chart, the horizontal (x) axis shows different years from 1980 to 2023. Not all countries have data for all years. For each year, you should see a curved line with the area underneath shaded red or blue. Let’s start by looking at just one of the curved lines for single year, 1995.\nThe vertical (y) axis shows the percentage of each countries income (% income) that was received by the richest 1% of the country’s population in that year. The colours show the same thing. Higher (red) values mean a more unequal distribution of income. Lower (blue) values mean a more equal distribution of income.\n\n\n\n\nThe curved lines show what % income is common. Higher peaks mean more countries have that value. For example, in 1995 lots of countries have a % income around 10% and lots have a % income around 23%. In 2023, all countries are a bit more similar, and have a value of around 15%.\nThese lines do not change when selecting a different country using the dropdown.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe points that are shown when you select a country from the dropdown show the values for that country in each year where data is available. Going from left to right when looking at the points allows you to see how it is changing over time. Points going upwards, means that country is becoming more unequal.\nLooking at how a specific point for a year compares to the curve let’s you see how it compares to all other countries in that year. For example a value of 8% is quite common in 1980, but not very common in 2023."
+  },
+  {
+    "objectID": "local-council-elections/index.html",
+    "href": "local-council-elections/index.html",
+    "title": "Local council elections",
+    "section": "",
+    "text": "NoteOriginal article\n\n\n\nThe data in this chart, and the chart text, comes from a YouGov article on Labour’s voter coalition broke more to left than right at 2026 local elections, published on 21 May 2026. This chord diagram is inspired by the Sankey diagram in the original article."
   }
 ]
