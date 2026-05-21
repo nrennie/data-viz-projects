@@ -191,12 +191,12 @@ g_girafe <- girafe(
 ::: {.centered-text}
 
 ::: {.bigger-text}
-[**More alike, but more unequal**]{style="color:#00344A;"} 
+**More alike, but more unequal**
 :::
 
-[The share of income received by the richest 1% of the population where income is measured before payment of taxes and non-pension benefits but after the payment of public and private pensions. Countries are becoming more similar in their wealth inequality, but more unequal on average.]{style="color:#00344A;"} 
+The share of income received by the richest 1% of the population where income is measured before payment of taxes and non-pension benefits but after the payment of public and private pensions. Countries are becoming more similar in their wealth inequality, but more unequal on average.
 
-[Highlight a country using the dropdown menu:]{style="color:#00344A;"} 
+Highlight a country using the dropdown menu:
 :::
 
 ```{r}
@@ -281,8 +281,10 @@ g1995 <- ggplot() +
   )
 ```
 
-<details>
-  <summary>How do I read this chart?</summary>
+
+::: {.callout-tip collapse="true"}
+
+## How do I read this chart?
 
 ::: {.grid}
 
@@ -352,7 +354,7 @@ suppressMessages(print(g1995b))
 
 ::: {.g-col-12 .g-col-md-6}
 
-![](Income Inequality/images/uk.png)
+![](images/featured.png)
 
 :::
 
@@ -366,6 +368,4 @@ Looking at how a specific point for a year compares to the curve let's you see h
 
 :::
   
-
-    
-</details>
+:::
