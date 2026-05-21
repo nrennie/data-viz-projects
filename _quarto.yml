@@ -1,0 +1,32 @@
+project:
+  type: website
+  output-dir: docs
+  render:
+  - "*.qmd"
+  - "!Income Inequality/*.qmd"
+  - "!Periodic Table/*.qmd"
+
+website:
+  twitter-card: true
+  open-graph: true
+  image: "assets/img/featured.png"
+  favicon: "assets/img/favicon.ico"
+  navbar:
+    right:
+      - text: Home
+        href: index.qmd
+      - text: Projects
+        menu:
+          - text: Local council elections
+            href: local-council-elections/index.qmd
+  page-footer: "© Nicola Rennie. 2026.<br>Except where otherwise noted, content on this site is licensed under a [Creative Commons Attribution 4.0 International license](https://creativecommons.org/licenses/by/4.0/)."
+
+format:
+  html:
+    theme:
+      light: [flatly,assets/css/custom.scss,assets/css/custom-light.scss]
+      dark: [darkly,assets/css/custom.scss,assets/css/custom-dark.scss]
+    respect-user-color-scheme: true
+    toc: true
+    toc-location: left
+    code-overflow: wrap

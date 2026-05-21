@@ -1,0 +1,39 @@
+/*-- scss:defaults --*/
+
+$headlineColorCustom: #B00783;
+$headingColorCustom: #B00783;
+$bodyLinkColorCustom: #B00783;
+$navLinkColorCustom: #B00783;
+$sidebarLinkColorCustom: #B00783;
+$footerTextColorCustom: #B00783;
+$contrast-color: #B00783;
+$link-color: #B00783;
+$buttonHoverBgColorCustom: #B00783;
+$borderColorCustom: #B00783;
+
+$body-color: #F2F4F8;
+$code-color: #F2F4F8;
+$textColorCustom: #F2F4F8;
+$sidebarTextColorCustom: #F2F4F8;
+
+$body-bg: #151C28;
+$navbar-bg: #151C28;
+$siteBgColorCustom: #151C28;
+$sidebarBgColorCustom: #151C28;
+$buttonTextColorCustom: #151C28;
+$buttonHoverTextColorCustom: #151C28;
+$buttonBgColorCustom: #151C28;
+
+$code-block-bg: #07090D;
+
+/*-- scss:rules --*/
+
+.termsfeed-com---palette-light.termsfeed-com---nb {
+  background-color: rgba(176,7,131, 0.3) !important;
+  color: $body-color !important;
+}
+
+div.callout-important.callout-style-default>.callout-header {
+  background-color: rgba(176,7,131, 0.3) !important;
+}
+

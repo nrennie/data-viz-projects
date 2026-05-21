@@ -19,3 +19,6 @@ recording/
 */data/
 rosm.cache/
 Map of Edinburgh/*.jpg
+
+/.quarto/
+**/*.quarto_ipynb
