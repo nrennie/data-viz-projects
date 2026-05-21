@@ -1,0 +1,171 @@
+---
+title: "Local council elections"
+subtitle: "Reimagining a Sankey chart as an interactive Chord diagram"
+execute: 
+  echo: false
+  eval: true
+  warning: false
+  message: false
+---
+
+::: {.callout-note}
+
+## Original article
+
+The data in this chart, and the chart text, comes from a YouGov article on [Labour’s voter coalition broke more to left than right at 2026 local elections](https://yougov.com/en-gb/articles/54811-labours-voter-coalition-broke-more-to-left-than-right-at-2026-local-elections), published on 21 May 2026. This chord diagram is inspired by the Sankey diagram in the original article.
+
+:::
+
+```{r}
+library(ggplot2)
+library(ggchord2)
+library(readr)
+library(dplyr)
+library(showtext)
+library(ggtext)
+library(ggiraph)
+library(glue)
+```
+
+```{r}
+raw_data <- readr::read_csv("data.csv")
+```
+
+```{r}
+font_add_google("Inter")
+showtext_auto()
+body_font <- "Inter"
+```
+
+```{r}
+party_colours <- c(
+  "Green"        = "#31CAA8",
+  "Labour"       = "#C20800",
+  "Lib Dem"      = "#ffba22",
+  "Other"        = "#B3BBC9",
+  "Conservative" = "#003CAB",
+  "Reform UK"    = "#06A6EE"
+)
+bg_col <- "#F2F4F8"
+text_col <- "#333333"
+```
+
+```{r}
+title <- "How did 2024 Westminster voters vote in the 2026 local elections?"
+st <- "On 7th May 2026, local council elections were held in your local authority. Which party, if any, did you vote for in these local council elections? If you had more than one vote in your ward and you split it across parties/candidates, please tell us which party or candidate you voted for with your first vote.<br><br>*% of 1,173 people who were likely to vote in the 2026 local elections*"
+caption <- "**Data**: YouGov (8 - 12 May 2026)"
+```
+
+```{r}
+plot_data <- raw_data |>
+  rename(
+    source = `2024 General Election Vote`,
+    target = `2026 Local Election Vote`
+  )
+```
+
+```{r}
+g_x <- ggplot(plot_data) +
+  geom_polygon(
+    stat = "chord",
+    mapping = aes(source = source, target = target, freq = Votes)
+  )
+chord_data <- ggplot_build(g_x)$data[[1]] |>
+  dplyr::filter(!is.na(x), !is.na(y))
+arc_data <- chord_data |>
+  dplyr::filter(!is.na(source), !is.na(target))
+arc_data$poly_id <- interaction(arc_data$group, arc_data$PANEL)
+arc_data$tooltip <- paste0(
+  arc_data$source,
+  " → ",
+  arc_data$target
+)
+```
+
+
+```{r}
+g <- ggplot(
+  data = plot_data
+) +
+  geom_chord_sectors(
+    mapping = aes(
+      source = source,
+      target = target,
+      freq = Votes,
+      fill = source
+    )
+  ) +
+  geom_polygon_interactive(
+    data = arc_data,
+    aes(
+      x = x,
+      y = y,
+      group = poly_id,
+      fill = node,
+      tooltip = tooltip,
+      data_id = poly_id
+    ),
+    alpha = 0.7
+  ) +
+  geom_chord_labels(
+    mapping = aes(
+      source = source,
+      target = target,
+      freq = Votes,
+    ),
+    family = body_font,
+    size = 4
+  ) +
+  scale_x_continuous(limits = c(-1.2, 1.2)) +
+  scale_fill_manual(values = party_colours) +
+  labs(
+    title = title,
+    subtitle = st,
+    caption = caption
+  ) +
+  coord_fixed() +
+  theme_void(base_family = body_font, ink = text_col) +
+  theme(
+    legend.position = "none",
+    plot.margin = margin(10, 10, 10, 10),
+    plot.title.position = "plot",
+    plot.caption.position = "plot",
+    plot.title = element_textbox_simple(
+      face = "bold",
+      size = rel(1.6),
+      margin = margin(b = 10)
+    ),
+    plot.subtitle = element_textbox_simple(margin = margin(b = 5)),
+    plot.caption = element_textbox_simple()
+  )
+```
+
+
+```{r}
+#| fig-height: 7
+girafe(
+  ggobj = g,
+  bg = bg_col,
+  options = list(
+    opts_tooltip(
+      delay_mouseover = 500,
+      opacity = 0.9,
+      css = glue("
+        padding: 5pt;
+        font-family: {body_font};
+        font-size: 1rem;
+        background-color: {bg_col};
+        color: {text_col};
+        border: solid;
+        border-color: {text_col};
+        border-radius: 5px;
+        border-width: 2px")
+    ),
+    opts_hover(css = "opacity: 1;"),
+    opts_hover_inv(css = "opacity: 0.3;"),
+    opts_toolbar(hidden = c("saveaspng", "fullscreen")),
+    opts_zoom(max = 1)
+  )
+)
+```
+
