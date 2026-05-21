@@ -1,0 +1,29 @@
+---
+title: "U.S. Judges"
+subtitle: "Interactive D3.js chart embedded as an iframe"
+execute: 
+  echo: false
+  eval: true
+  warning: false
+  message: false
+  freeze: auto
+---
+
+```{=html}
+<div class="container">
+<iframe class="responsive-iframe" src="us-judges.html" scrolling="no"></iframe>
+</div>
+```
+
+```{css}
+.responsive-iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+}
+```
+

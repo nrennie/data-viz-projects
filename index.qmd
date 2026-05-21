@@ -41,7 +41,7 @@ This site hosts a collection of [my](https://nrennie.rbind.io/) miscellaneous da
 
 Submitted for the European Space Agency Little Pictures competition.
 
-![](ESA-little-pictures/esa-little-pictures.png){width="100%"}
+![](little-pictures/esa-little-pictures.png){width="100%"}
 
 ### StackOverflow Survey
 
@@ -173,7 +173,7 @@ Heatmap of HADCET data designed in R, then crocheted with yarn.
 
 ### Poetry
 
-![](poetry/images/still-i-rise-v1.png){width="100%"}
+![](poetry-art/images/still-i-rise-v1.png){width="100%"}
 
 
 ### Shakespeare's Sonnets
@@ -216,6 +216,12 @@ Explore the [interactive version](/local-council-elections/).
 Explore the [interactive version](/periodic-table/).
 
 ![](periodic-table/featured.png){width="100%"}
+
+### U.S. Judges
+
+Explore the [interactive version](/us-judges/).
+
+![](us-judges/featured.png){width="100%"}
 
 ::: {.callout-tip}
 
