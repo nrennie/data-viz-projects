@@ -1,3 +1,13 @@
+---
+title: "Income inequality"
+subtitle: "Use the dropdown to compare income inequality across countries"
+execute: 
+  echo: false
+  eval: true
+  warning: false
+  message: false
+  freeze: auto
+---
 
 ```{r}
 #| message: false
@@ -17,7 +27,7 @@ library(htmltools)
 ```{r}
 #| message: false
 # Data: https://ourworldindata.org/economic-inequality
-income <- readr::read_csv("Income Inequality/data/income-share-of-the-richest-1.csv")
+income <- readr::read_csv("data/income-share-of-the-richest-1.csv")
 ```
 
 ```{r}

@@ -3,7 +3,6 @@ project:
   output-dir: docs
   render:
   - "*.qmd"
-  - "!Income Inequality/*.qmd"
 
 website:
   title: "Data Visualisation Projects"
@@ -17,6 +16,8 @@ website:
         href: index.qmd
       - text: Interactive projects
         menu:
+          - text: Income inequality
+            href: income-inequality/index.qmd
           - text: Local council elections
             href: local-council-elections/index.qmd
           - text: Periodic table
