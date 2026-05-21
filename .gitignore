@@ -23,3 +23,5 @@ photomap-edinburgh/*.jpg
 /.quarto/
 **/*.quarto_ipynb
 docs/
+!us-judges/us-judges.html
+!us-judges/data.csv

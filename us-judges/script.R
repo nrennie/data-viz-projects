@@ -46,4 +46,4 @@ plot_data <- new_presidential |>
 
 # Write CSV ---------------------------------------------------------------
 
-readr::write_csv(plot_data, "2025/2025-06-10/data.csv")
+readr::write_csv(plot_data, "us-judges/data.csv")
