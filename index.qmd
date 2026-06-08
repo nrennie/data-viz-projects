@@ -7,6 +7,13 @@ execute:
 
 This site hosts a collection of [my](https://nrennie.rbind.io/) miscellaneous data visualisation projects. This home page includes all static charts, but you can also explore different interactive visualisations via the *Interactive projects* tab.
 
+::: {.callout-tip}
+
+You can find other examples of my data visualisation work in my [online gallery](https://nrennie.rbind.io/viz-gallery/), and discussions of my process on my [blog](https://nrennie.rbind.io/blog/).
+
+:::
+
+
 ## Static charts
 
 ### History of the Akimel O’odham
