@@ -1,0 +1,15 @@
+{
+  "hash": "a17801190e5aa3d1d0ed6cb0a772f1ff",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Video Game Films\"\nsubtitle: \"Hover over the different bars to learn about ratings of video game inspired films\"\nexecute: \n  echo: false\n  eval: true\n  warning: false\n  message: false\n  freeze: auto\nengine: knitr\n---\n\n\n::: {.cell}\n::: {.cell-output .cell-output-stdout}\n\n```\n<highlight_text.htext.HighlightText object at 0x000001A2280D1880>\n```\n\n\n:::\n\n::: {.cell-output .cell-output-stdout}\n\n```\n<highlight_text.htext.HighlightText object at 0x000001A228712630>\n```\n\n\n:::\n:::\n\n\n\n```{=html}\n<div class=\"container\">\n<iframe class=\"responsive-iframe\" src=\"video-game-films.html\" scrolling=\"no\" allowtransparency=\"true\"></iframe>\n</div>\n```\n\n\n::: {.cell}\n<style type=\"text/css\">\n.container {\n    position: relative;\n    overflow: hidden;\n    width: 100%;\n    padding-top: 100%;\n}\n\n.responsive-iframe {\n    position: absolute;\n    top: 0;\n    left: 0;\n    bottom: 0;\n    right: 0;\n    width: 100%;\n    height: 80%;\n    max-height: 500px !important;\n    max-width: 600px !important;\n}\n</style>\n:::\n\n\n\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

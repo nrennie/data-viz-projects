@@ -11,48 +11,48 @@ This site hosts a collection of [my](https://nrennie.rbind.io/) miscellaneous da
 
 ### History of the Akimel O’odham
 
-![](history-akimel-oodham/images/history.png){width="100%"}
+![](history-akimel-oodham/images/history.png){width="100%" fig-alt=""}
 
 
 ### Lemur Family Tree
 
-![](lemur-family-tree/images/lemur-family-tree.png){width="100%"}
+![](lemur-family-tree/images/lemur-family-tree.png){width="100%" fig-alt=""}
 
 
 ### London Marathon
 
-![](london-marathon/images/london-marathon.jpg){width="100%"}
+![](london-marathon/images/london-marathon.jpg){width="100%" fig-alt=""}
 
 
 ### Nobel Prize Laureates
 
-![](nobel-prize-laureates/images/nobel_light_mode.png){width="100%"}
+![](nobel-prize-laureates/images/nobel_light_mode.png){width="100%" fig-alt=""}
 
 
 ### Reading Shelf
 
-![](reading-shelf/images/reading-shelf.png){width="100%"}
+![](reading-shelf/images/reading-shelf.png){width="100%" fig-alt=""}
 
 ### Reddit's *al dente* pasta
 
-![](reddit-al-dente-pasta/images/pasta.png){width="100%"}
+![](reddit-al-dente-pasta/images/pasta.png){width="100%" fig-alt=""}
 
 ### Sea Surface Temperatures
 
 Submitted for the European Space Agency Little Pictures competition.
 
-![](little-pictures/esa-little-pictures.png){width="100%"}
+![](little-pictures/esa-little-pictures.png){width="100%" fig-alt=""}
 
 ### StackOverflow Survey
 
 ::: {.grid}
 
 ::: {.g-col-12 .g-col-md-6}
-![](stackoverflow-survey/so_age.png){width="100%"}
+![](stackoverflow-survey/so_age.png){width="100%" fig-alt=""}
 :::
 
 ::: {.g-col-12 .g-col-md-6}
-![](stackoverflow-survey/so_coding.png){width="100%"}
+![](stackoverflow-survey/so_coding.png){width="100%" fig-alt=""}
 :::
 
 :::
@@ -60,11 +60,11 @@ Submitted for the European Space Agency Little Pictures competition.
 ::: {.grid}
 
 ::: {.g-col-12 .g-col-md-6}
-![](stackoverflow-survey/so_education.png){width="100%"}
+![](stackoverflow-survey/so_education.png){width="100%" fig-alt=""}
 :::
 
 ::: {.g-col-12 .g-col-md-6}
-![](stackoverflow-survey/so_salary.png){width="100%"}
+![](stackoverflow-survey/so_salary.png){width="100%" fig-alt=""}
 :::
 
 :::
@@ -76,11 +76,11 @@ Summary of my most used R functions and packages in [TidyTuesday visualisations]
 ::: {.grid}
 
 ::: {.g-col-12 .g-col-md-6}
-![](tidytuesday-wrapped/images/tidytuesday-wrapped-2023.png){width="100%"}
+![](tidytuesday-wrapped/images/tidytuesday-wrapped-2023.png){width="100%" fig-alt=""}
 :::
 
 ::: {.g-col-12 .g-col-md-6}
-![](tidytuesday-wrapped/images/tidytuesday-wrapped-2022.png){width="100%"}
+![](tidytuesday-wrapped/images/tidytuesday-wrapped-2022.png){width="100%" fig-alt=""}
 :::
 
 :::
@@ -88,22 +88,22 @@ Summary of my most used R functions and packages in [TidyTuesday visualisations]
 
 ### Western States 100
 
-![](western-states-100/western-states-100.jpg){width="100%"}
+![](western-states-100/western-states-100.jpg){width="100%" fig-alt=""}
 
 ### xkcd Colors
 
-![](xkcd-colors/images/xkcd-colors.png){width="100%"}
+![](xkcd-colors/images/xkcd-colors.png){width="100%" fig-alt=""}
 
 
 ## Static maps
 
 ### Circography
 
-![](circography-maps/images/circography.png){width="100%"}
+![](circography-maps/images/circography.png){width="100%" fig-alt=""}
 
 ### Forest of Bowland
 
-![](forest-of-bowland/images/forest-of-bowland.png){width="100%"}
+![](forest-of-bowland/images/forest-of-bowland.png){width="100%" fig-alt=""}
 
 
 ### General Health
@@ -114,13 +114,13 @@ Two maps using Census 2021 data, one made with R and one made with Python.
 
 ::: {.g-col-12 .g-col-md-6}
 
-![](general-health/images/general-health-2021-census-a.png){width="100%"}
+![](general-health/images/general-health-2021-census-a.png){width="100%" fig-alt=""}
 
 :::
 
 ::: {.g-col-12 .g-col-md-6}
 
-![](general-health/images/general-health-2021-census-b.png){width="100%"}
+![](general-health/images/general-health-2021-census-b.png){width="100%" fig-alt=""}
 
 :::
 
@@ -128,21 +128,21 @@ Two maps using Census 2021 data, one made with R and one made with Python.
 
 ### John Snow Cholera Map
 
-![](john-snow-cholera-map/images/john-snow-cholera-map-nrennie.png){width="100%"}
+![](john-snow-cholera-map/images/john-snow-cholera-map-nrennie.png){width="100%" fig-alt=""}
 
 ### Photomap of Edinburgh
 
-![](photo-map-edinburgh/images/map.png){width="100%"}
+![](photo-map-edinburgh/images/map.png){width="100%" fig-alt=""}
 
 
 ### Regions in Boxes
 
-![](regions-in-boxes/images/scotland.png){width="100%"}
+![](regions-in-boxes/images/scotland.png){width="100%" fig-alt=""}
 
 
 ### Typography Cartography
 
-![](typography-cartography/images/typography-cartography.png){width="100%"}
+![](typography-cartography/images/typography-cartography.png){width="100%" fig-alt=""}
 
 
 ## Data art
@@ -151,7 +151,7 @@ Two maps using Census 2021 data, one made with R and one made with Python.
 
 Heatmap treemap of most common colours used in Bob Ross paintings.
 
-![](bob-ross-paintings/images/bob-ross-paintings.png){width="100%"}
+![](bob-ross-paintings/images/bob-ross-paintings.png){width="100%" fig-alt=""}
 
 
 ### Heatmap Blanket
@@ -161,11 +161,11 @@ Heatmap of HADCET data designed in R, then crocheted with yarn.
 ::: {.grid}
 
 ::: {.g-col-12 .g-col-md-6}
-![](heatmap-blanket/images/heatmap-blanket-pattern.png){width="100%"}
+![](heatmap-blanket/images/heatmap-blanket-pattern.png){width="100%" fig-alt=""}
 :::
 
 ::: {.g-col-12 .g-col-md-6}
-![](heatmap-blanket/images/heatmap-blanket.jpg){width="100%"}
+![](heatmap-blanket/images/heatmap-blanket.jpg){width="100%" fig-alt=""}
 :::
 
 :::
@@ -173,7 +173,7 @@ Heatmap of HADCET data designed in R, then crocheted with yarn.
 
 ### Poetry
 
-![](poetry-art/images/still-i-rise-v1.png){width="100%"}
+![](poetry-art/images/still-i-rise-v1.png){width="100%" fig-alt=""}
 
 
 ### Shakespeare's Sonnets
@@ -181,15 +181,15 @@ Heatmap of HADCET data designed in R, then crocheted with yarn.
 ::: {.grid}
 
 ::: {.g-col-12 .g-col-md-4}
-![](shakespeares-sonnets/images/sonnetCLIII.png){width="100%"}
+![](shakespeares-sonnets/images/sonnetCLIII.png){width="100%" fig-alt=""}
 :::
 
 ::: {.g-col-12 .g-col-md-4}
-![](shakespeares-sonnets/images/sonnetCXLIX.png){width="100%"}
+![](shakespeares-sonnets/images/sonnetCXLIX.png){width="100%" fig-alt=""}
 :::
 
 ::: {.g-col-12 .g-col-md-4}
-![](shakespeares-sonnets/images/sonnetXVIII.png){width="100%"}
+![](shakespeares-sonnets/images/sonnetXVIII.png){width="100%" fig-alt=""}
 :::
 
 :::
@@ -201,27 +201,33 @@ Heatmap of HADCET data designed in R, then crocheted with yarn.
 
 Explore the [interactive version](/income-inequality/).
 
-![](income-inequality/featured.png){width="100%"}
+![](income-inequality/featured.png){width="100%" fig-alt=""}
 
 
 ### Local Council Elections
 
 Explore the [interactive version](/local-council-elections/).
 
-![](local-council-elections/featured.png){width="100%"}
+![](local-council-elections/featured.png){width="100%" fig-alt=""}
 
 
 ### Periodic Table
 
 Explore the [interactive version](/periodic-table/).
 
-![](periodic-table/featured.png){width="100%"}
+![](periodic-table/featured.png){width="100%" fig-alt=""}
 
 ### U.S. Judges
 
 Explore the [interactive version](/us-judges/).
 
-![](us-judges/featured.png){width="100%"}
+![](us-judges/featured.png){width="100%" fig-alt=""}
+
+### Video Game Films
+
+Explore the [interactive version](/video-game-films/).
+
+![](video-game-films/featured.gif){width="100%" fig-alt=""}
 
 ::: {.callout-tip}
 
