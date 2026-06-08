@@ -225,7 +225,7 @@ ht.fig_text(
 # Use CSS to hide one
 (
     interactive(p, hover_nearest=True)
-    + css(from_dict={".tooltip": {"font-size": "2em"}})
+    + css(from_dict={".tooltip": {"font-size": "1em"}})
     + css(from_file="style.css")
     + save("video-game-films.html")
 )

@@ -1,3 +1,8 @@
 #text_32 {
   display: none !important;
 }
+
+#plot-container {
+  margin-left: 50px;
+  margin-right: 50px;
+}
