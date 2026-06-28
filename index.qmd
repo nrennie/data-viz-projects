@@ -224,6 +224,13 @@ Explore the [interactive version](/periodic-table/).
 
 ![](periodic-table/featured.png){width="100%" fig-alt=""}
 
+### Statistical Performance Indicators
+
+Explore the [interactive version](/statistical-performance/).
+
+![](statistical-performance/featured.png){width="100%" fig-alt=""}
+
+
 ### U.S. Judges
 
 Explore the [interactive version](/us-judges/).

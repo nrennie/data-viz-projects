@@ -1,0 +1,15 @@
+{
+  "hash": "e9ce68cf7388936ed29da5887166465b",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Statistical Performance Indicators\"\nsubtitle: \"Interactive JavaScript table embedded as an iframe\"\nexecute: \n  echo: false\n  eval: true\n  warning: false\n  message: false\n  freeze: auto\nengine: knitr\nresources: \n  - script.js\n  - data.csv\n---\n\n```{=html}\n<div class=\"container\">\n<iframe class=\"responsive-iframe\" src=\"spi.html\" scrolling=\"no\" allowtransparency=\"true\"></iframe>\n</div>\n```\n\n\n::: {.cell}\n<style type=\"text/css\">\n.container {\n    position: relative;\n    overflow: hidden;\n    width: 100%;\n    padding-top: 100%;\n}\n\n.responsive-iframe {\n    position: absolute;\n    top: 0;\n    left: 0;\n    bottom: 0;\n    right: 0;\n    width: 100%;\n    height: 80%;\n    max-height: 500px !important;\n    max-width: 600px !important;\n}\n</style>\n:::\n\n\nRead more at [nrennie.rbind.io/data-stories/statistical-performance-indicators/index.html](https://nrennie.rbind.io/data-stories/statistical-performance-indicators/index.html).\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

@@ -22,6 +22,8 @@ website:
             href: local-council-elections/index.qmd
           - text: Periodic table
             href: periodic-table/index.qmd
+          - text: Statistical Performance
+            href: statistical-performance/index.qmd
           - text: U.S. Judges
             href: us-judges/index.qmd
           - text: Video Game Films
