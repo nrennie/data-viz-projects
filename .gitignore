@@ -25,3 +25,5 @@ photomap-edinburgh/*.jpg
 docs/
 !us-judges/us-judges.html
 !us-judges/data.csv
+!statistical-performance/spi.html
+!statistical-performance/data.csv
