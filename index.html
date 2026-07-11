@@ -46,7 +46,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="site_libs/bootstrap/bootstrap-b2c423d96dbee249840eafae4d20a3c2.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-77c5edb6db4470a6bbc1246e56e6e77e.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-dark-b2c423d96dbee249840eafae4d20a3c2.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
 <link href="site_libs/bootstrap/bootstrap-b2c423d96dbee249840eafae4d20a3c2.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script src="site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
 <link href="site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
@@ -96,178 +96,7 @@ ul.task-list li input[type="checkbox"] {
 <meta name="twitter:card" content="summary_large_image">
 </head>
 
-<body class="floating nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
-    const toggleBodyColorMode = (bsSheetEl) => {
-      const mode = bsSheetEl.getAttribute("data-mode");
-      const bodyEl = window.document.querySelector("body");
-      if (mode === "dark") {
-        bodyEl.classList.add("quarto-dark");
-        bodyEl.classList.remove("quarto-light");
-      } else {
-        bodyEl.classList.add("quarto-light");
-        bodyEl.classList.remove("quarto-dark");
-      }
-    }
-    const toggleBodyColorPrimary = () => {
-      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
-      if (bsSheetEl) {
-        toggleBodyColorMode(bsSheetEl);
-      }
-    }
-    const setColorSchemeToggle = (alternate) => {
-      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
-      for (let i=0; i < toggles.length; i++) {
-        const toggle = toggles[i];
-        if (toggle) {
-          if (alternate) {
-            toggle.classList.add("alternate");
-          } else {
-            toggle.classList.remove("alternate");
-          }
-        }
-      }
-    };
-    const toggleColorMode = (alternate) => {
-      // Switch the stylesheets
-      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
-      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
-      manageTransitions('#quarto-margin-sidebar .nav-link', false);
-      if (alternate) {
-        // note: dark is layered on light, we don't disable primary!
-        enableStylesheet(alternateStylesheets);
-        for (const sheetNode of alternateStylesheets) {
-          if (sheetNode.id === "quarto-bootstrap") {
-            toggleBodyColorMode(sheetNode);
-          }
-        }
-      } else {
-        disableStylesheet(alternateStylesheets);
-        enableStylesheet(primaryStylesheets)
-        toggleBodyColorPrimary();
-      }
-      manageTransitions('#quarto-margin-sidebar .nav-link', true);
-      // Switch the toggles
-      setColorSchemeToggle(alternate)
-      // Hack to workaround the fact that safari doesn't
-      // properly recolor the scrollbar when toggling (#1455)
-      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
-        manageTransitions("body", false);
-        window.scrollTo(0, 1);
-        setTimeout(() => {
-          window.scrollTo(0, 0);
-          manageTransitions("body", true);
-        }, 40);
-      }
-    }
-    const disableStylesheet = (stylesheets) => {
-      for (let i=0; i < stylesheets.length; i++) {
-        const stylesheet = stylesheets[i];
-        stylesheet.rel = 'disabled-stylesheet';
-      }
-    }
-    const enableStylesheet = (stylesheets) => {
-      for (let i=0; i < stylesheets.length; i++) {
-        const stylesheet = stylesheets[i];
-        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
-          stylesheet.rel = 'stylesheet';
-        }
-      }
-    }
-    const manageTransitions = (selector, allowTransitions) => {
-      const els = window.document.querySelectorAll(selector);
-      for (let i=0; i < els.length; i++) {
-        const el = els[i];
-        if (allowTransitions) {
-          el.classList.remove('notransition');
-        } else {
-          el.classList.add('notransition');
-        }
-      }
-    }
-    const isFileUrl = () => {
-      return window.location.protocol === 'file:';
-    }
-    const hasAlternateSentinel = () => {
-      let styleSentinel = getColorSchemeSentinel();
-      if (styleSentinel !== null) {
-        return styleSentinel === "alternate";
-      } else {
-        return false;
-      }
-    }
-    const setStyleSentinel = (alternate) => {
-      const value = alternate ? "alternate" : "default";
-      if (!isFileUrl()) {
-        window.localStorage.setItem("quarto-color-scheme", value);
-      } else {
-        localAlternateSentinel = value;
-      }
-    }
-    const getColorSchemeSentinel = () => {
-      if (!isFileUrl()) {
-        const storageValue = window.localStorage.getItem("quarto-color-scheme");
-        return storageValue != null ? storageValue : localAlternateSentinel;
-      } else {
-        return localAlternateSentinel;
-      }
-    }
-    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
-      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
-      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
-      let newTheme = '';
-      if(authorPrefersDark) {
-        newTheme = isAlternate ? baseTheme : alternateTheme;
-      } else {
-        newTheme = isAlternate ? alternateTheme : baseTheme;
-      }
-      const changeGiscusTheme = () => {
-        // From: https://github.com/giscus/giscus/issues/336
-        const sendMessage = (message) => {
-          const iframe = document.querySelector('iframe.giscus-frame');
-          if (!iframe) return;
-          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
-        }
-        sendMessage({
-          setConfig: {
-            theme: newTheme
-          }
-        });
-      }
-      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
-      if (isGiscussLoaded) {
-        changeGiscusTheme();
-      }
-    };
-    const authorPrefersDark = false;
-    const queryPrefersDark = window.matchMedia('(prefers-color-scheme: dark)');
-    const darkModeDefault = queryPrefersDark.matches;
-      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
-      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
-    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
-    // Dark / light mode switch
-    window.quartoToggleColorScheme = () => {
-      // Read the current dark / light value
-      let toAlternate = !hasAlternateSentinel();
-      toggleColorMode(toAlternate);
-      setStyleSentinel(toAlternate);
-      toggleGiscusIfUsed(toAlternate, darkModeDefault);
-      window.dispatchEvent(new Event('resize'));
-    };
-    queryPrefersDark.addEventListener("change", e => {
-      if(window.localStorage.getItem("quarto-color-scheme") !== null)
-        return;
-      const alternate = e.matches
-      toggleColorMode(alternate);
-      localAlternateSentinel = e.matches ? 'alternate' : 'default'; // this is used alongside local storage!
-      toggleGiscusIfUsed(alternate, darkModeDefault);
-    });
-    // Switch to dark mode if need be
-    if (hasAlternateSentinel()) {
-      toggleColorMode(true);
-    } else {
-      toggleColorMode(false);
-    }
-  </script>
+<body class="floating nav-fixed quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -306,6 +135,10 @@ ul.task-list li input[type="checkbox"] {
  <span class="dropdown-text">Periodic table</span></a>
   </li>  
         <li>
+    <a class="dropdown-item" href="./scottish-temperatures/index.html">
+ <span class="dropdown-text">Scottish temperatures</span></a>
+  </li>  
+        <li>
     <a class="dropdown-item" href="./statistical-performance/index.html">
  <span class="dropdown-text">Statistical performance</span></a>
   </li>  
@@ -322,7 +155,6 @@ ul.task-list li input[type="checkbox"] {
 </ul>
           </div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools">
-  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
 </div>
       </div> <!-- /container-fluid -->
     </nav>
@@ -371,6 +203,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#income-inequality" id="toc-income-inequality" class="nav-link" data-scroll-target="#income-inequality">Income Inequality</a></li>
   <li><a href="#local-council-elections" id="toc-local-council-elections" class="nav-link" data-scroll-target="#local-council-elections">Local Council Elections</a></li>
   <li><a href="#periodic-table" id="toc-periodic-table" class="nav-link" data-scroll-target="#periodic-table">Periodic Table</a></li>
+  <li><a href="#scottish-temperatures" id="toc-scottish-temperatures" class="nav-link" data-scroll-target="#scottish-temperatures">Scottish Temperatures</a></li>
   <li><a href="#statistical-performance-indicators" id="toc-statistical-performance-indicators" class="nav-link" data-scroll-target="#statistical-performance-indicators">Statistical Performance Indicators</a></li>
   <li><a href="#u.s.-judges" id="toc-u.s.-judges" class="nav-link" data-scroll-target="#u.s.-judges">U.S. Judges</a></li>
   <li><a href="#video-game-films" id="toc-video-game-films" class="nav-link" data-scroll-target="#video-game-films">Video Game Films</a></li>
@@ -384,7 +217,6 @@ ul.task-list li input[type="checkbox"] {
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
-
 
 
 
@@ -568,20 +400,25 @@ Tip
 <p>Explore the <a href=".\periodic-table/">interactive version</a>.</p>
 <p><a href="periodic-table/featured.png" class="lightbox" data-gallery="quarto-lightbox-gallery-33"><img src="periodic-table/featured.png" class="img-fluid" style="width:100.0%" alt=""></a></p>
 </section>
+<section id="scottish-temperatures" class="level3">
+<h3 class="anchored" data-anchor-id="scottish-temperatures">Scottish Temperatures</h3>
+<p>Explore the <a href=".\scottish-temperatures/">interactive version</a>.</p>
+<p><a href="scottish-temperatures/featured.png" class="lightbox" data-gallery="quarto-lightbox-gallery-34"><img src="scottish-temperatures/featured.png" class="img-fluid" style="width:100.0%" alt="Screenshot of small multiple charts showing minimum and maximum temperatures across 8 sites in Scotland."></a></p>
+</section>
 <section id="statistical-performance-indicators" class="level3">
 <h3 class="anchored" data-anchor-id="statistical-performance-indicators">Statistical Performance Indicators</h3>
 <p>Explore the <a href=".\statistical-performance/">interactive version</a>.</p>
-<p><a href="statistical-performance/featured.png" class="lightbox" data-gallery="quarto-lightbox-gallery-34"><img src="statistical-performance/featured.png" class="img-fluid" style="width:100.0%" alt=""></a></p>
+<p><a href="statistical-performance/featured.png" class="lightbox" data-gallery="quarto-lightbox-gallery-35"><img src="statistical-performance/featured.png" class="img-fluid" style="width:100.0%" alt=""></a></p>
 </section>
 <section id="u.s.-judges" class="level3">
 <h3 class="anchored" data-anchor-id="u.s.-judges">U.S. Judges</h3>
 <p>Explore the <a href=".\us-judges/">interactive version</a>.</p>
-<p><a href="us-judges/featured.png" class="lightbox" data-gallery="quarto-lightbox-gallery-35"><img src="us-judges/featured.png" class="img-fluid" style="width:100.0%" alt=""></a></p>
+<p><a href="us-judges/featured.png" class="lightbox" data-gallery="quarto-lightbox-gallery-36"><img src="us-judges/featured.png" class="img-fluid" style="width:100.0%" alt=""></a></p>
 </section>
 <section id="video-game-films" class="level3">
 <h3 class="anchored" data-anchor-id="video-game-films">Video Game Films</h3>
 <p>Explore the <a href=".\video-game-films/">interactive version</a>.</p>
-<p><a href="video-game-films/featured.gif" class="lightbox" data-gallery="quarto-lightbox-gallery-36"><img src="video-game-films/featured.gif" class="img-fluid" style="width:100.0%" alt=""></a></p>
+<p><a href="video-game-films/featured.gif" class="lightbox" data-gallery="quarto-lightbox-gallery-37"><img src="video-game-films/featured.gif" class="img-fluid" style="width:100.0%" alt=""></a></p>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -603,19 +440,6 @@ Tip
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
-    // Ensure there is a toggle, if there isn't float one in the top right
-    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
-      const a = window.document.createElement('a');
-      a.classList.add('top-right');
-      a.classList.add('quarto-color-scheme-toggle');
-      a.href = "";
-      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
-      const i = window.document.createElement("i");
-      i.classList.add('bi');
-      a.appendChild(i);
-      window.document.body.appendChild(a);
-    }
-    setColorSchemeToggle(hasAlternateSentinel())
     const icon = "";
     const anchorJS = new window.AnchorJS();
     anchorJS.options = {
