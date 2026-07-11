@@ -22,6 +22,8 @@ website:
             href: local-council-elections/index.qmd
           - text: Periodic table
             href: periodic-table/index.qmd
+          - text: Scottish temperatures
+            href: scottish-temperatures/index.qmd
           - text: Statistical performance
             href: statistical-performance/index.qmd
           - text: U.S. Judges
@@ -32,10 +34,7 @@ website:
 
 format:
   html:
-    theme:
-      light: [flatly,assets/css/custom.scss,assets/css/custom-light.scss]
-      dark: [darkly,assets/css/custom.scss,assets/css/custom-dark.scss]
-    respect-user-color-scheme: true
+    theme: [flatly,assets/css/custom.scss,assets/css/custom-light.scss]
     toc: true
     toc-location: left
     code-overflow: wrap

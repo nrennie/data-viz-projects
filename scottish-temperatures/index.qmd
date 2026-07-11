@@ -1,0 +1,203 @@
+---
+title: "Scottish temperatures"
+subtitle: "Explore trends in minimum and maximum temperatures across Scotland by month."
+execute: 
+  echo: false
+  eval: true
+  warning: false
+  message: false
+---
+
+```{r}
+# Packages
+library(tidyverse)
+library(showtext)
+library(ggtext)
+library(nrBrand)
+library(glue)
+library(ggview)
+library(rnaturalearth)
+library(ggiraph)
+library(htmltools)
+library(cowplot)
+library(grid)
+```
+
+```{r}
+# Data
+weather <- read_csv("data/weather.csv")
+metadata <- read_csv("data/metadata.csv")
+uk <- ne_states(country = "united kingdom")
+scot_map <- uk |>
+  filter(geonunit == "Scotland")
+```
+
+```{r}
+# Fonts
+font_add_google("Oswald")
+font_add_google("Nunito")
+showtext_auto()
+showtext_opts(dpi = 300)
+```
+
+```{r}
+# Parameters
+title_font <- "Oswald"
+body_font <- "Nunito"
+bg_col <- "#F2F4F8"
+text_col <- "#151C28"
+```
+
+```{r}
+# Settings
+knitr::opts_chunk$set(dev.args = list(bg = bg_col))
+```
+
+```{r}
+# Data wrangling
+station_levels <- metadata |>
+  arrange(desc(lat)) |>
+  pull(station)
+
+plot_data <- weather |>
+  select(station, year, month, min_temp, max_temp) |>
+  mutate(
+    month = factor(month.name[month], levels = month.name),
+    station = factor(station, levels = station_levels)
+  ) |>
+  drop_na()
+
+max_data <- plot_data |>
+  group_by(station, month) |>
+  slice_max(max_temp) |>
+  ungroup() |>
+  select(station, month, year, max_temp)
+
+min_data <- plot_data |>
+  group_by(station, month) |>
+  slice_min(min_temp) |>
+  ungroup() |>
+  select(station, month, year, min_temp)
+
+min_max_data <- plot_data |>
+  group_by(
+    station, month
+  ) |>
+  summarise(
+    min_year = min(year),
+    max_year = max(year),
+    min_temp = min(min_temp, na.rm = TRUE),
+    max_temp = max(max_temp, na.rm = TRUE)
+  ) |>
+  ungroup()
+```
+
+The Met Office makes monthly data available from a selection of long-running historic weather stations. The series typically range from 50 to more than 100 years in length. There are 8 stations in Scotland which are still actively collecting data. The data collected includes mean daily minimum and maximum temperatures.
+
+::: {.grid}
+
+::: {.g-col-12 .g-col-md-6}
+
+```{r}
+#| file: R/map.R
+#| fig-asp: 1
+#| fig-alt: "Map of Scotland showing locations of 8 weather stations."
+```
+
+:::
+
+::: {.g-col-12 .g-col-md-6}
+
+```{r}
+#| file: R/legend.R
+#| fig-asp: 1
+#| fig-alt: "Mini chart for Leuchars station with annotations explaining how to interpret it."
+```
+
+
+:::
+
+:::
+
+<br>
+
+```{r}
+# Dropdown
+options_vec <- month.name
+names(options_vec) <- month.name
+dropdown_html <- tags$div(
+  style = "text-align: center; margin-bottom: 10px;",
+  tags$select(
+    id = "dropdown",
+    lapply(names(options_vec), function(name) {
+      tags$option(value = options_vec[[name]], name)
+    })
+  )
+)
+browsable(
+  tagList(
+    dropdown_html
+  )
+)
+```
+
+```{css}
+#dropdown {
+  border-radius: 4px;
+  border: 2px solid #AAAAAA;
+  padding-bottom: 2px;
+  width: 100%;
+}
+
+.grid {
+  gap: 0px !important;
+}
+```
+
+Average minimum and maximum daily temperatures (°C) per month across eight different weather stations in Scotland.
+
+```{r}
+#| file: R/chart.R
+```
+
+```{r}
+#| fig-asp: 0.9
+#| fig-alt: "Small multiple charts showing monthly minimum and maximum temperature at each weather station in Scotland."
+g_int <- girafe(
+  ggobj = g_chart,
+  options = list(
+    opts_hover(css = ""),
+    opts_toolbar(hidden = c("saveaspng", "fullscreen"), saveaspng = FALSE)
+  )
+)
+browsable(
+  tagList(
+    g_int,
+    tags$script(HTML("
+      function filterByDropdown() {
+        const selected = document.getElementById('dropdown').value;
+        document.querySelectorAll('[data-id]').forEach(el => {
+          if (el.getAttribute('data-id') === selected) {
+            el.setAttribute('opacity', '1');
+            el.classList.add('selected');
+          } else {
+            el.setAttribute('opacity', '0');
+            el.classList.remove('selected');
+          }
+        });
+      }
+
+      document.getElementById('dropdown').addEventListener('change', filterByDropdown);
+      document.addEventListener('DOMContentLoaded', filterByDropdown);
+    "))
+  )
+)
+```
+
+<br>
+
+**Note**: Only active stations are included, which means that Nairn (closed 2014) and Paisley (closed 2011) are excluded. Braemar station had a slight change in location in April 2005.
+
+**Data**: [Historic station data](https://www.metoffice.gov.uk/research/climate/maps-and-data/historic-station-data) from the Met Office. Accessed 10 July 2026.
+
+**Graphic**: {{< fa brands linkedin >}} [nicola-rennie](https://www.linkedin.com/in/nicola-rennie/) {{< fa brands github >}} [nrennie](https://github.com/nrennie) {{< fa globe >}} [nrennie.rbind.io](https://nrennie.rbind.io/)

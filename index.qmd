@@ -224,6 +224,13 @@ Explore the [interactive version](/periodic-table/).
 
 ![](periodic-table/featured.png){width="100%" fig-alt=""}
 
+### Scottish Temperatures
+
+Explore the [interactive version](/scottish-temperatures/).
+
+![](scottish-temperatures/featured.png){width="100%" fig-alt="Screenshot of small multiple charts showing minimum and maximum temperatures across 8 sites in Scotland."}
+
+
 ### Statistical Performance Indicators
 
 Explore the [interactive version](/statistical-performance/).
