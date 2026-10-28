@@ -12,6 +12,7 @@ resources:
   - script.js
   - data.csv
   - spi.css
+  - spi.html
 ---
 
 ```{=html}

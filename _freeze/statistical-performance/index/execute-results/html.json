@@ -1,9 +1,11 @@
 {
-  "hash": "7a1b9676ae3da97ce1f97c02c42700a8",
+  "hash": "02a1e780f7f79bb4f4b2f61d633554a9",
   "result": {
     "engine": "knitr",
-    "markdown": "---\ntitle: \"Statistical Performance Indicators\"\nsubtitle: \"Interactive JavaScript table embedded as an iframe\"\nexecute: \n  echo: false\n  eval: true\n  warning: false\n  message: false\n  freeze: auto\nengine: knitr\nresources: \n  - script.js\n  - data.csv\n  - spi.css\n---\n\n```{=html}\n<script src=\"https://cdnjs.cloudflare.com/ajax/libs/pym/1.3.2/pym.v1.min.js\"></script>\n<div id=\"tableSPI\"></div>\n<script>\n    var pymParent = new pym.Parent('tableSPI', 'spi.html', {});\n</script>\n```\n\n\nRead more about statistical performance indicators in my [How good is your country at statistics?](https://nrennie.rbind.io/data-stories/statistical-performance-indicators/index.html) article.\n",
-    "supporting": [],
+    "markdown": "---\ntitle: \"Statistical Performance Indicators\"\nsubtitle: \"Interactive JavaScript table embedded as an iframe\"\nexecute: \n  echo: false\n  eval: true\n  warning: false\n  message: false\n  freeze: auto\nengine: knitr\nresources: \n  - script.js\n  - data.csv\n  - spi.css\n  - spi.html\n---\n\n```{=html}\n<script src=\"https://cdnjs.cloudflare.com/ajax/libs/pym/1.3.2/pym.v1.min.js\"></script>\n<div id=\"tableSPI\"></div>\n<script>\n    var pymParent = new pym.Parent('tableSPI', 'spi.html', {});\n</script>\n```\n\n\nRead more about statistical performance indicators in my [How good is your country at statistics?](https://nrennie.rbind.io/data-stories/statistical-performance-indicators/index.html) article.\n",
+    "supporting": [
+      "index_files"
+    ],
     "filters": [
       "rmarkdown/pagebreak.lua"
     ],
