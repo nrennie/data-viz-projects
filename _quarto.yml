@@ -37,4 +37,5 @@ format:
     theme: [flatly,assets/css/custom.scss,assets/css/custom-light.scss]
     toc: true
     toc-location: left
+    toc-depth: 3
     code-overflow: wrap
