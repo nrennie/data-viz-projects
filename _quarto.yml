@@ -34,7 +34,7 @@ website:
 
 format:
   html:
-    theme: [flatly,assets/css/custom.scss,assets/css/custom-light.scss]
+    theme: [flatly,assets/css/light.scss]
     toc: true
     toc-location: left
     toc-depth: 3
